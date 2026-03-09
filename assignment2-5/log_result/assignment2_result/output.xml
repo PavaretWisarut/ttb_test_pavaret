@@ -1,0 +1,1824 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.11.9 on win32)" generated="2026-03-09T23:45:27.482134" rpa="false" schemaversion="5">
+<suite id="s1" name="Testcases" source="C:\Users\USER\OneDrive\เอกสาร\project_git\ttb_test_pavaret\assignment2-5\testcases">
+<suite id="s1-s1" name="Assignment2" source="C:\Users\USER\OneDrive\เอกสาร\project_git\ttb_test_pavaret\assignment2-5\testcases\assignment2.robot">
+<test id="s1-s1-t1" name="Test_heroku_01 : Login success" line="9">
+<kw name="Open heroku website" owner="common_web" type="SETUP">
+<msg time="2026-03-09T23:45:27.837966" level="TRACE">Arguments: [ ${url}='http://the-internet.herokuapp.com/login' ]</msg>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-09T23:45:27.838966" level="TRACE">Arguments: [ "sys.modules['selenium.webdriver'].ChromeOptions()" | 'sys, selenium.webdriver' ]</msg>
+<msg time="2026-03-09T23:45:27.839966" level="TRACE">Return: &lt;selenium.webdriver.chrome.options.Options object at 0x000001B73A1F3250&gt;</msg>
+<msg time="2026-03-09T23:45:27.839966" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001B73A1F3250&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-09T23:45:27.838966" elapsed="0.001000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2026-03-09T23:45:27.840966" level="TRACE">Arguments: [ &lt;selenium.webdriver.chrome.options.Options object at 0x000001B73A1F3250&gt; | 'add_argument' | '--incognito' ]</msg>
+<msg time="2026-03-09T23:45:27.840966" level="TRACE">Return: None</msg>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-03-09T23:45:27.839966" elapsed="0.001000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:27.841472" level="TRACE">Arguments: [ url='http://the-internet.herokuapp.com/login' | browser='chrome' | options=&lt;selenium.webdriver.chrome.options.Options object at 0x000001B73A1F3250&gt; ]</msg>
+<msg time="2026-03-09T23:45:27.841472" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/login'.</msg>
+<msg time="2026-03-09T23:45:27.845477" level="DEBUG">Selenium Manager binary found at: C:\Users\USER\OneDrive\เอกสาร\project_git\ttb_test_pavaret\assignment2-5\.venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe</msg>
+<msg time="2026-03-09T23:45:27.845477" level="DEBUG">Executing process: C:\Users\USER\OneDrive\เอกสาร\project_git\ttb_test_pavaret\assignment2-5\.venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --language-binding python --output json</msg>
+<msg time="2026-03-09T23:45:27.916432" level="DEBUG">Driver path: C:\chromedriver\chromedriver.exe</msg>
+<msg time="2026-03-09T23:45:27.917432" level="DEBUG">Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
+<msg time="2026-03-09T23:45:27.921943" level="DEBUG">Started executable: `C:\chromedriver\chromedriver.exe` in a child process with pid: 27368 using 0 to output -3</msg>
+<msg time="2026-03-09T23:45:28.442334" level="DEBUG">POST http://localhost:65102/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': &lt;PageLoadStrategy.normal: 'normal'&gt;, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': ['--incognito']}}}}</msg>
+<msg time="2026-03-09T23:45:28.443332" level="DEBUG">Starting new HTTP connection (1): localhost:65102</msg>
+<msg time="2026-03-09T23:45:28.909734" level="DEBUG">http://localhost:65102 "POST /session HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:28.909734" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"145.0.7632.160","chrome":{"chromedriverVersion":"145.0.7632.160 (662e0d7961bd91ebe77fe6c52f369e45647af51c-refs/branch-heads/7632@{#3674})","userDataDir":"C:\\Users\\USER\\AppData\\Local\\Temp\\scoped_dir27368_1199022884"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:65105"},"goog:processID":5104,"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"a12f00d9921fbad3cbb7bb6906ac7b1f"}} | headers=HTTPHeaderDict({'Content-Length': '905', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:28.909734" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:28.909734" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/timeouts {'script': 5000}</msg>
+<msg time="2026-03-09T23:45:28.909734" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:28.909734" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:28.909734" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:28.909734" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/timeouts {'implicit': 0}</msg>
+<msg time="2026-03-09T23:45:28.911237" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:28.911237" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:28.911237" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:28.911237" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/timeouts {'pageLoad': 300000}</msg>
+<msg time="2026-03-09T23:45:28.911237" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:28.912241" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:28.912241" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:28.912241" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/url {'url': 'http://the-internet.herokuapp.com/login'}</msg>
+<msg time="2026-03-09T23:45:32.335540" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/url HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:32.336548" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:32.337550" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:32.337550" level="DEBUG">Opened browser with session id a12f00d9921fbad3cbb7bb6906ac7b1f.</msg>
+<msg time="2026-03-09T23:45:32.337550" level="TRACE">Return: 1</msg>
+<arg>url=${url}</arg>
+<arg>browser=chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-09T23:45:27.841472" elapsed="4.496078"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:32.338549" level="TRACE">Arguments: [  ]</msg>
+<msg time="2026-03-09T23:45:32.338549" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/window/maximize {}</msg>
+<msg time="2026-03-09T23:45:32.367610" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/window/maximize HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:32.367610" level="DEBUG">Remote response: status=200 | data={"value":{"height":1048,"width":1936,"x":-8,"y":-8}} | headers=HTTPHeaderDict({'Content-Length': '52', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:32.367610" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:32.367610" level="TRACE">Return: None</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-09T23:45:32.338549" elapsed="0.029061"/>
+</kw>
+<msg time="2026-03-09T23:45:32.367610" level="TRACE">Return: None</msg>
+<doc>Open heroku website</doc>
+<status status="PASS" start="2026-03-09T23:45:27.837966" elapsed="4.529644"/>
+</kw>
+<kw name="Verify login page is displayed" owner="heroku_login_page">
+<msg time="2026-03-09T23:45:32.367610" level="TRACE">Arguments: [  ]</msg>
+<kw name="Wait until element is visible with retry" owner="common_web">
+<msg time="2026-03-09T23:45:32.369676" level="TRACE">Arguments: [ ${locator}='xpath=//div[@class="example"]/h2[text()="Login Page"]' | ${max_attempt}=3 | ${timeout}='40s' ]</msg>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<msg time="2026-03-09T23:45:32.369676" level="TRACE">Arguments: [ 'SeleniumLibrary.Wait until element is visible' | '${locator}' | '${timeout}' ]</msg>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:32.371178" level="TRACE">Arguments: [ 'xpath=//div[@class="example"]/h2[text()="Login Page"]' | datetime.timedelta(seconds=40) ]</msg>
+<msg time="2026-03-09T23:45:32.371178" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements {'using': 'xpath', 'value': '//div[@class="example"]/h2[text()="Login Page"]'}</msg>
+<msg time="2026-03-09T23:45:32.378348" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:32.378348" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.17"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:32.378348" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:32.378348" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){/*\n\n Copyright The Closure Library Authors.\n ...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.17'}]}</msg>
+<msg time="2026-03-09T23:45:32.384859" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/execute/sync HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:32.384859" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:32.384859" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:32.384859" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-09T23:45:32.369676" elapsed="0.016182"/>
+</kw>
+<msg time="2026-03-09T23:45:32.385858" level="TRACE">Return: True</msg>
+<msg time="2026-03-09T23:45:32.385858" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>SeleniumLibrary.Wait until element is visible</arg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-03-09T23:45:32.369676" elapsed="0.016182"/>
+</kw>
+<if>
+<branch type="IF" condition="${status}">
+<return>
+<status status="PASS" start="2026-03-09T23:45:32.385858" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2026-03-09T23:45:32.385858" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-03-09T23:45:32.385858" elapsed="0.000000"/>
+</if>
+<var name="${i}">0</var>
+<status status="PASS" start="2026-03-09T23:45:32.369676" elapsed="0.016182"/>
+</iter>
+<var>${i}</var>
+<value>${max_attempt}</value>
+<status status="PASS" start="2026-03-09T23:45:32.369676" elapsed="0.016182"/>
+</for>
+<kw name="Fail" owner="BuiltIn">
+<arg>Element '${locator}' not visible after ${max_attempt} attempts</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-03-09T23:45:32.385858" elapsed="0.000000"/>
+</kw>
+<msg time="2026-03-09T23:45:32.386857" level="TRACE">Return: None</msg>
+<arg>locator=${heroku_login_locator.lbl_login}</arg>
+<doc>Wait until element is visible with retry
+${max_attempt} e.g. by default is 3 rounds
+${timeout} e.g. by default is 40s</doc>
+<status status="PASS" start="2026-03-09T23:45:32.368674" elapsed="0.018183"/>
+</kw>
+<msg time="2026-03-09T23:45:32.386857" level="TRACE">Return: None</msg>
+<doc>Verify login page is displayed label "Login Page"</doc>
+<status status="PASS" start="2026-03-09T23:45:32.367610" elapsed="0.019247"/>
+</kw>
+<kw name="Login to heroku" owner="heroku_login_feature">
+<msg time="2026-03-09T23:45:32.387856" level="TRACE">Arguments: [ ${username}='tomsmith' | ${password}='SuperSecretPassword!' ]</msg>
+<kw name="Input username" owner="heroku_login_page">
+<msg time="2026-03-09T23:45:32.388856" level="TRACE">Arguments: [ ${username}='tomsmith' ]</msg>
+<kw name="Tap element and input text to element when ready" owner="common_web">
+<msg time="2026-03-09T23:45:32.388856" level="TRACE">Arguments: [ ${locator}='id=username' | ${text}='tomsmith' | ${timeout}='40s' ]</msg>
+<kw name="Wait until element is visible with retry" owner="common_web">
+<msg time="2026-03-09T23:45:32.389856" level="TRACE">Arguments: [ ${locator}='id=username' | ${max_attempt}=3 | ${timeout}='40s' ]</msg>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<msg time="2026-03-09T23:45:32.389856" level="TRACE">Arguments: [ 'SeleniumLibrary.Wait until element is visible' | '${locator}' | '${timeout}' ]</msg>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:32.390856" level="TRACE">Arguments: [ 'id=username' | datetime.timedelta(seconds=40) ]</msg>
+<msg time="2026-03-09T23:45:32.390856" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements {'using': 'css selector', 'value': '[id="username"]'}</msg>
+<msg time="2026-03-09T23:45:32.396998" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:32.396998" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.3"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:32.396998" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:32.397998" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){/*\n\n Copyright The Closure Library Authors.\n ...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.3'}]}</msg>
+<msg time="2026-03-09T23:45:32.400997" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/execute/sync HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:32.400997" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:32.400997" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:32.402085" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-09T23:45:32.390856" elapsed="0.011229"/>
+</kw>
+<msg time="2026-03-09T23:45:32.402085" level="TRACE">Return: True</msg>
+<msg time="2026-03-09T23:45:32.402085" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>SeleniumLibrary.Wait until element is visible</arg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-03-09T23:45:32.389856" elapsed="0.012229"/>
+</kw>
+<if>
+<branch type="IF" condition="${status}">
+<return>
+<status status="PASS" start="2026-03-09T23:45:32.402085" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2026-03-09T23:45:32.402085" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-03-09T23:45:32.402085" elapsed="0.000000"/>
+</if>
+<var name="${i}">0</var>
+<status status="PASS" start="2026-03-09T23:45:32.389856" elapsed="0.012229"/>
+</iter>
+<var>${i}</var>
+<value>${max_attempt}</value>
+<status status="PASS" start="2026-03-09T23:45:32.389856" elapsed="0.012229"/>
+</for>
+<kw name="Fail" owner="BuiltIn">
+<arg>Element '${locator}' not visible after ${max_attempt} attempts</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-03-09T23:45:32.402085" elapsed="0.000000"/>
+</kw>
+<msg time="2026-03-09T23:45:32.402085" level="TRACE">Return: None</msg>
+<arg>locator=${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Wait until element is visible with retry
+${max_attempt} e.g. by default is 3 rounds
+40s e.g. by default is 40s</doc>
+<status status="PASS" start="2026-03-09T23:45:32.389856" elapsed="0.012229"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:32.402085" level="TRACE">Arguments: [ 'id=username' ]</msg>
+<msg time="2026-03-09T23:45:32.402085" level="INFO">Clicking element 'id=username'.</msg>
+<msg time="2026-03-09T23:45:32.403083" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements {'using': 'css selector', 'value': '[id="username"]'}</msg>
+<msg time="2026-03-09T23:45:32.405059" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:32.406059" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.3"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:32.406059" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:32.406059" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/element/f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.3/click {}</msg>
+<msg time="2026-03-09T23:45:32.446133" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/element/f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.3/click HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:32.446133" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:32.446133" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:32.446133" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T23:45:32.402085" elapsed="0.044048"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:32.447133" level="TRACE">Arguments: [ 'id=username' | 'tomsmith' ]</msg>
+<msg time="2026-03-09T23:45:32.447133" level="INFO">Typing text 'tomsmith' into text field 'id=username'.</msg>
+<msg time="2026-03-09T23:45:32.447133" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements {'using': 'css selector', 'value': '[id="username"]'}</msg>
+<msg time="2026-03-09T23:45:32.451641" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:32.451641" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.3"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:32.451641" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:32.451641" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/element/f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.3/clear {}</msg>
+<msg time="2026-03-09T23:45:32.466154" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/element/f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.3/clear HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:32.466154" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:32.466154" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:32.466154" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/element/f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.3/value {'text': 'tomsmith', 'value': ['t', 'o', 'm', 's', 'm', 'i', 't', 'h']}</msg>
+<msg time="2026-03-09T23:45:32.486248" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/element/f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.3/value HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:32.487250" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:32.487250" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:32.487250" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T23:45:32.446133" elapsed="0.041117"/>
+</kw>
+<msg time="2026-03-09T23:45:32.487250" level="TRACE">Return: None</msg>
+<arg>locator=${heroku_login_locator.txt_username}</arg>
+<arg>text=${username}</arg>
+<doc>Tap element and input text to element when ready</doc>
+<status status="PASS" start="2026-03-09T23:45:32.388856" elapsed="0.098394"/>
+</kw>
+<msg time="2026-03-09T23:45:32.487250" level="TRACE">Return: None</msg>
+<arg>username=${username}</arg>
+<doc>Input username into username field
+tomsmith e.g. tomsmith</doc>
+<status status="PASS" start="2026-03-09T23:45:32.387856" elapsed="0.099394"/>
+</kw>
+<kw name="Input password" owner="heroku_login_page">
+<msg time="2026-03-09T23:45:32.487250" level="TRACE">Arguments: [ ${password}='SuperSecretPassword!' ]</msg>
+<kw name="Tap element and input text to element when ready" owner="common_web">
+<msg time="2026-03-09T23:45:32.488250" level="TRACE">Arguments: [ ${locator}='id=password' | ${text}='SuperSecretPassword!' | ${timeout}='40s' ]</msg>
+<kw name="Wait until element is visible with retry" owner="common_web">
+<msg time="2026-03-09T23:45:32.489248" level="TRACE">Arguments: [ ${locator}='id=password' | ${max_attempt}=3 | ${timeout}='40s' ]</msg>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<msg time="2026-03-09T23:45:32.489248" level="TRACE">Arguments: [ 'SeleniumLibrary.Wait until element is visible' | '${locator}' | '${timeout}' ]</msg>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:32.490248" level="TRACE">Arguments: [ 'id=password' | datetime.timedelta(seconds=40) ]</msg>
+<msg time="2026-03-09T23:45:32.490248" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements {'using': 'css selector', 'value': '[id="password"]'}</msg>
+<msg time="2026-03-09T23:45:32.495756" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:32.495756" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.4"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:32.495756" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:32.495756" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){/*\n\n Copyright The Closure Library Authors.\n ...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.4'}]}</msg>
+<msg time="2026-03-09T23:45:32.501261" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/execute/sync HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:32.501261" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:32.501261" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:32.501261" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-09T23:45:32.490248" elapsed="0.011013"/>
+</kw>
+<msg time="2026-03-09T23:45:32.501261" level="TRACE">Return: True</msg>
+<msg time="2026-03-09T23:45:32.501261" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>SeleniumLibrary.Wait until element is visible</arg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-03-09T23:45:32.489248" elapsed="0.012013"/>
+</kw>
+<if>
+<branch type="IF" condition="${status}">
+<return>
+<status status="PASS" start="2026-03-09T23:45:32.501261" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2026-03-09T23:45:32.501261" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-03-09T23:45:32.501261" elapsed="0.000000"/>
+</if>
+<var name="${i}">0</var>
+<status status="PASS" start="2026-03-09T23:45:32.489248" elapsed="0.012013"/>
+</iter>
+<var>${i}</var>
+<value>${max_attempt}</value>
+<status status="PASS" start="2026-03-09T23:45:32.489248" elapsed="0.012013"/>
+</for>
+<kw name="Fail" owner="BuiltIn">
+<arg>Element '${locator}' not visible after ${max_attempt} attempts</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-03-09T23:45:32.501261" elapsed="0.000000"/>
+</kw>
+<msg time="2026-03-09T23:45:32.502265" level="TRACE">Return: None</msg>
+<arg>locator=${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Wait until element is visible with retry
+${max_attempt} e.g. by default is 3 rounds
+40s e.g. by default is 40s</doc>
+<status status="PASS" start="2026-03-09T23:45:32.489248" elapsed="0.013017"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:32.502265" level="TRACE">Arguments: [ 'id=password' ]</msg>
+<msg time="2026-03-09T23:45:32.502265" level="INFO">Clicking element 'id=password'.</msg>
+<msg time="2026-03-09T23:45:32.502265" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements {'using': 'css selector', 'value': '[id="password"]'}</msg>
+<msg time="2026-03-09T23:45:32.505265" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:32.505265" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.4"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:32.505265" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:32.505265" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/element/f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.4/click {}</msg>
+<msg time="2026-03-09T23:45:32.532347" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/element/f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.4/click HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:32.532347" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:32.532347" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:32.533347" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T23:45:32.502265" elapsed="0.031082"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:32.533347" level="TRACE">Arguments: [ 'id=password' | 'SuperSecretPassword!' ]</msg>
+<msg time="2026-03-09T23:45:32.533347" level="INFO">Typing text 'SuperSecretPassword!' into text field 'id=password'.</msg>
+<msg time="2026-03-09T23:45:32.534347" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements {'using': 'css selector', 'value': '[id="password"]'}</msg>
+<msg time="2026-03-09T23:45:32.537344" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:32.537344" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.4"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:32.537344" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:32.537344" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/element/f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.4/clear {}</msg>
+<msg time="2026-03-09T23:45:32.548854" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/element/f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.4/clear HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:32.549855" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:32.549855" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:32.549855" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/element/f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.4/value {'text': 'SuperSecretPassword!', 'value': ['S', 'u', 'p', 'e', 'r', 'S', 'e', 'c', 'r', 'e', 't', 'P', 'a', 's', 's', 'w', 'o', 'r', 'd', '!']}</msg>
+<msg time="2026-03-09T23:45:32.573022" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/element/f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.4/value HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:32.573022" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:32.573022" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:32.573022" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T23:45:32.533347" elapsed="0.039675"/>
+</kw>
+<msg time="2026-03-09T23:45:32.573022" level="TRACE">Return: None</msg>
+<arg>locator=${heroku_login_locator.txt_password}</arg>
+<arg>text=${password}</arg>
+<doc>Tap element and input text to element when ready</doc>
+<status status="PASS" start="2026-03-09T23:45:32.488250" elapsed="0.084772"/>
+</kw>
+<msg time="2026-03-09T23:45:32.573022" level="TRACE">Return: None</msg>
+<arg>password=${password}</arg>
+<doc>Input password into password field
+SuperSecretPassword! e.g. SuperSecretPassword!</doc>
+<status status="PASS" start="2026-03-09T23:45:32.487250" elapsed="0.085772"/>
+</kw>
+<kw name="Click login button" owner="heroku_login_page">
+<msg time="2026-03-09T23:45:32.573022" level="TRACE">Arguments: [  ]</msg>
+<kw name="Tap element when ready" owner="common_web">
+<msg time="2026-03-09T23:45:32.574526" level="TRACE">Arguments: [ ${locator}='xpath=//button[@type="submit"]' | ${timeout}='40s' ]</msg>
+<kw name="Wait until element is visible with retry" owner="common_web">
+<msg time="2026-03-09T23:45:32.575530" level="TRACE">Arguments: [ ${locator}='xpath=//button[@type="submit"]' | ${max_attempt}=3 | ${timeout}='40s' ]</msg>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<msg time="2026-03-09T23:45:32.576529" level="TRACE">Arguments: [ 'SeleniumLibrary.Wait until element is visible' | '${locator}' | '${timeout}' ]</msg>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:32.576529" level="TRACE">Arguments: [ 'xpath=//button[@type="submit"]' | datetime.timedelta(seconds=40) ]</msg>
+<msg time="2026-03-09T23:45:32.576529" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements {'using': 'xpath', 'value': '//button[@type="submit"]'}</msg>
+<msg time="2026-03-09T23:45:32.582040" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:32.583041" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.5"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:32.583041" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:32.583041" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){/*\n\n Copyright The Closure Library Authors.\n ...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.5'}]}</msg>
+<msg time="2026-03-09T23:45:32.586040" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/execute/sync HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:32.586040" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:32.586040" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:32.586040" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-09T23:45:32.576529" elapsed="0.009511"/>
+</kw>
+<msg time="2026-03-09T23:45:32.586040" level="TRACE">Return: True</msg>
+<msg time="2026-03-09T23:45:32.586040" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>SeleniumLibrary.Wait until element is visible</arg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-03-09T23:45:32.575530" elapsed="0.010510"/>
+</kw>
+<if>
+<branch type="IF" condition="${status}">
+<return>
+<status status="PASS" start="2026-03-09T23:45:32.586040" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2026-03-09T23:45:32.586040" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-03-09T23:45:32.586040" elapsed="0.000000"/>
+</if>
+<var name="${i}">0</var>
+<status status="PASS" start="2026-03-09T23:45:32.575530" elapsed="0.010510"/>
+</iter>
+<var>${i}</var>
+<value>${max_attempt}</value>
+<status status="PASS" start="2026-03-09T23:45:32.575530" elapsed="0.010510"/>
+</for>
+<kw name="Fail" owner="BuiltIn">
+<arg>Element '${locator}' not visible after ${max_attempt} attempts</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-03-09T23:45:32.587039" elapsed="0.000000"/>
+</kw>
+<msg time="2026-03-09T23:45:32.587039" level="TRACE">Return: None</msg>
+<arg>locator=${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Wait until element is visible with retry
+${max_attempt} e.g. by default is 3 rounds
+40s e.g. by default is 40s</doc>
+<status status="PASS" start="2026-03-09T23:45:32.575530" elapsed="0.011509"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:32.587039" level="TRACE">Arguments: [ 'xpath=//button[@type="submit"]' ]</msg>
+<msg time="2026-03-09T23:45:32.587039" level="INFO">Clicking element 'xpath=//button[@type="submit"]'.</msg>
+<msg time="2026-03-09T23:45:32.587039" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements {'using': 'xpath', 'value': '//button[@type="submit"]'}</msg>
+<msg time="2026-03-09T23:45:32.590040" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:32.590040" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.5"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:32.590040" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:32.590040" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/element/f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.5/click {}</msg>
+<msg time="2026-03-09T23:45:32.619150" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/element/f.268F1ECAE8C6E6984F0060E59A121EAB.d.879B1FB5CE0771A9BD9B381AB6E3AECD.e.5/click HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:32.620150" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:32.620150" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:32.620150" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T23:45:32.587039" elapsed="0.033111"/>
+</kw>
+<msg time="2026-03-09T23:45:32.620150" level="TRACE">Return: None</msg>
+<arg>locator=${heroku_login_locator.btn_login}</arg>
+<doc>Tap element when element is ready</doc>
+<status status="PASS" start="2026-03-09T23:45:32.574526" elapsed="0.045624"/>
+</kw>
+<msg time="2026-03-09T23:45:32.620150" level="TRACE">Return: None</msg>
+<doc>Click login button</doc>
+<status status="PASS" start="2026-03-09T23:45:32.573022" elapsed="0.047128"/>
+</kw>
+<msg time="2026-03-09T23:45:32.620150" level="TRACE">Return: None</msg>
+<arg>username=${assignment2.test_heroku_01.username}</arg>
+<arg>password=${assignment2.test_heroku_01.password}</arg>
+<doc>This feature use for login to heroku in login page
+${username} e.g. tomsmith
+${password} e.g. SuperSecretPassword!</doc>
+<status status="PASS" start="2026-03-09T23:45:32.387856" elapsed="0.232294"/>
+</kw>
+<kw name="Verify login success popup is displayed" owner="heroku_login_page">
+<msg time="2026-03-09T23:45:32.620150" level="TRACE">Arguments: [  ]</msg>
+<kw name="Wait until element is visible with retry" owner="common_web">
+<msg time="2026-03-09T23:45:32.621657" level="TRACE">Arguments: [ ${locator}='xpath=//div[@id="flash-messages"]/div[contains(text(),"You logged into a secure area!")]' | ${max_attempt}=3 | ${timeout}='40s' ]</msg>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<msg time="2026-03-09T23:45:32.622660" level="TRACE">Arguments: [ 'SeleniumLibrary.Wait until element is visible' | '${locator}' | '${timeout}' ]</msg>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:32.622660" level="TRACE">Arguments: [ 'xpath=//div[@id="flash-messages"]/div[contains(text(),"You logged into a secure area!")]' | datetime.timedelta(seconds=40) ]</msg>
+<msg time="2026-03-09T23:45:32.622660" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements {'using': 'xpath', 'value': '//div[@id="flash-messages"]/div[contains(text(),"You logged into a secure area!")]'}</msg>
+<msg time="2026-03-09T23:45:32.628660" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:32.628660" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:32.628660" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:32.829451" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements {'using': 'xpath', 'value': '//div[@id="flash-messages"]/div[contains(text(),"You logged into a secure area!")]'}</msg>
+<msg time="2026-03-09T23:45:33.199085" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:33.199085" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.268F1ECAE8C6E6984F0060E59A121EAB.d.F4B5D61CEC8823FD4AD25B6DCA363A41.e.21"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:33.199085" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:33.199085" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){/*\n\n Copyright The Closure Library Authors.\n ...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.268F1ECAE8C6E6984F0060E59A121EAB.d.F4B5D61CEC8823FD4AD25B6DCA363A41.e.21'}]}</msg>
+<msg time="2026-03-09T23:45:33.202501" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/execute/sync HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:33.202501" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:33.202501" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:33.202501" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-09T23:45:32.622660" elapsed="0.579841"/>
+</kw>
+<msg time="2026-03-09T23:45:33.202501" level="TRACE">Return: True</msg>
+<msg time="2026-03-09T23:45:33.202501" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>SeleniumLibrary.Wait until element is visible</arg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-03-09T23:45:32.622660" elapsed="0.580841"/>
+</kw>
+<if>
+<branch type="IF" condition="${status}">
+<return>
+<status status="PASS" start="2026-03-09T23:45:33.203501" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2026-03-09T23:45:33.203501" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-03-09T23:45:33.203501" elapsed="0.000000"/>
+</if>
+<var name="${i}">0</var>
+<status status="PASS" start="2026-03-09T23:45:32.622660" elapsed="0.580841"/>
+</iter>
+<var>${i}</var>
+<value>${max_attempt}</value>
+<status status="PASS" start="2026-03-09T23:45:32.621657" elapsed="0.581844"/>
+</for>
+<kw name="Fail" owner="BuiltIn">
+<arg>Element '${locator}' not visible after ${max_attempt} attempts</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-03-09T23:45:33.203501" elapsed="0.000000"/>
+</kw>
+<msg time="2026-03-09T23:45:33.203501" level="TRACE">Return: None</msg>
+<arg>locator=${heroku_login_locator.lbl_login_success}</arg>
+<doc>Wait until element is visible with retry
+${max_attempt} e.g. by default is 3 rounds
+${timeout} e.g. by default is 40s</doc>
+<status status="PASS" start="2026-03-09T23:45:32.621657" elapsed="0.581844"/>
+</kw>
+<msg time="2026-03-09T23:45:33.203501" level="TRACE">Return: None</msg>
+<doc>Verify login success popup is displayed popup label is "You logged into a secure area!"</doc>
+<status status="PASS" start="2026-03-09T23:45:32.620150" elapsed="0.583351"/>
+</kw>
+<kw name="Click logout button" owner="heroku_login_page">
+<msg time="2026-03-09T23:45:33.203501" level="TRACE">Arguments: [  ]</msg>
+<kw name="Tap element when ready" owner="common_web">
+<msg time="2026-03-09T23:45:33.204500" level="TRACE">Arguments: [ ${locator}='xpath=//a[@href="/logout"]' | ${timeout}='40s' ]</msg>
+<kw name="Wait until element is visible with retry" owner="common_web">
+<msg time="2026-03-09T23:45:33.205500" level="TRACE">Arguments: [ ${locator}='xpath=//a[@href="/logout"]' | ${max_attempt}=3 | ${timeout}='40s' ]</msg>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<msg time="2026-03-09T23:45:33.205500" level="TRACE">Arguments: [ 'SeleniumLibrary.Wait until element is visible' | '${locator}' | '${timeout}' ]</msg>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:33.206500" level="TRACE">Arguments: [ 'xpath=//a[@href="/logout"]' | datetime.timedelta(seconds=40) ]</msg>
+<msg time="2026-03-09T23:45:33.206500" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements {'using': 'xpath', 'value': '//a[@href="/logout"]'}</msg>
+<msg time="2026-03-09T23:45:33.212110" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:33.212110" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.268F1ECAE8C6E6984F0060E59A121EAB.d.F4B5D61CEC8823FD4AD25B6DCA363A41.e.22"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:33.212110" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:33.212110" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){/*\n\n Copyright The Closure Library Authors.\n ...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.268F1ECAE8C6E6984F0060E59A121EAB.d.F4B5D61CEC8823FD4AD25B6DCA363A41.e.22'}]}</msg>
+<msg time="2026-03-09T23:45:33.216111" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/execute/sync HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:33.216111" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:33.216111" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:33.216111" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-09T23:45:33.206500" elapsed="0.009611"/>
+</kw>
+<msg time="2026-03-09T23:45:33.216111" level="TRACE">Return: True</msg>
+<msg time="2026-03-09T23:45:33.216111" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>SeleniumLibrary.Wait until element is visible</arg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-03-09T23:45:33.205500" elapsed="0.010611"/>
+</kw>
+<if>
+<branch type="IF" condition="${status}">
+<return>
+<status status="PASS" start="2026-03-09T23:45:33.216111" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2026-03-09T23:45:33.216111" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-03-09T23:45:33.216111" elapsed="0.000000"/>
+</if>
+<var name="${i}">0</var>
+<status status="PASS" start="2026-03-09T23:45:33.205500" elapsed="0.010611"/>
+</iter>
+<var>${i}</var>
+<value>${max_attempt}</value>
+<status status="PASS" start="2026-03-09T23:45:33.205500" elapsed="0.010611"/>
+</for>
+<kw name="Fail" owner="BuiltIn">
+<arg>Element '${locator}' not visible after ${max_attempt} attempts</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-03-09T23:45:33.216111" elapsed="0.000000"/>
+</kw>
+<msg time="2026-03-09T23:45:33.217110" level="TRACE">Return: None</msg>
+<arg>locator=${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Wait until element is visible with retry
+${max_attempt} e.g. by default is 3 rounds
+40s e.g. by default is 40s</doc>
+<status status="PASS" start="2026-03-09T23:45:33.205500" elapsed="0.011610"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:33.217110" level="TRACE">Arguments: [ 'xpath=//a[@href="/logout"]' ]</msg>
+<msg time="2026-03-09T23:45:33.217110" level="INFO">Clicking element 'xpath=//a[@href="/logout"]'.</msg>
+<msg time="2026-03-09T23:45:33.217110" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements {'using': 'xpath', 'value': '//a[@href="/logout"]'}</msg>
+<msg time="2026-03-09T23:45:33.220110" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:33.220110" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.268F1ECAE8C6E6984F0060E59A121EAB.d.F4B5D61CEC8823FD4AD25B6DCA363A41.e.22"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:33.220110" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:33.221110" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/element/f.268F1ECAE8C6E6984F0060E59A121EAB.d.F4B5D61CEC8823FD4AD25B6DCA363A41.e.22/click {}</msg>
+<msg time="2026-03-09T23:45:33.802328" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/element/f.268F1ECAE8C6E6984F0060E59A121EAB.d.F4B5D61CEC8823FD4AD25B6DCA363A41.e.22/click HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:33.802328" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:33.802328" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:33.802328" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T23:45:33.217110" elapsed="0.585218"/>
+</kw>
+<msg time="2026-03-09T23:45:33.802328" level="TRACE">Return: None</msg>
+<arg>locator=${heroku_login_locator.btn_logout}</arg>
+<doc>Tap element when element is ready</doc>
+<status status="PASS" start="2026-03-09T23:45:33.204500" elapsed="0.597828"/>
+</kw>
+<msg time="2026-03-09T23:45:33.802328" level="TRACE">Return: None</msg>
+<doc>Click logout button</doc>
+<status status="PASS" start="2026-03-09T23:45:33.203501" elapsed="0.598827"/>
+</kw>
+<kw name="Verify logout success popup is displayed" owner="heroku_login_page">
+<msg time="2026-03-09T23:45:33.803328" level="TRACE">Arguments: [  ]</msg>
+<kw name="Wait until element is visible with retry" owner="common_web">
+<msg time="2026-03-09T23:45:33.805328" level="TRACE">Arguments: [ ${locator}='xpath=//div[@id="flash-messages"]/div[contains(text(),"You logged out of the secure area!")]' | ${max_attempt}=3 | ${timeout}='40s' ]</msg>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<msg time="2026-03-09T23:45:33.806328" level="TRACE">Arguments: [ 'SeleniumLibrary.Wait until element is visible' | '${locator}' | '${timeout}' ]</msg>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:33.806328" level="TRACE">Arguments: [ 'xpath=//div[@id="flash-messages"]/div[contains(text(),"You logged out of the secure area!")]' | datetime.timedelta(seconds=40) ]</msg>
+<msg time="2026-03-09T23:45:33.806328" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements {'using': 'xpath', 'value': '//div[@id="flash-messages"]/div[contains(text(),"You logged out of the secure area!")]'}</msg>
+<msg time="2026-03-09T23:45:33.814342" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:33.815343" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.268F1ECAE8C6E6984F0060E59A121EAB.d.7A5DE5882B64A989F707F939C79F1E91.e.29"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:33.815343" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:33.815343" level="DEBUG">POST http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){/*\n\n Copyright The Closure Library Authors.\n ...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.268F1ECAE8C6E6984F0060E59A121EAB.d.7A5DE5882B64A989F707F939C79F1E91.e.29'}]}</msg>
+<msg time="2026-03-09T23:45:33.820341" level="DEBUG">http://localhost:65102 "POST /session/a12f00d9921fbad3cbb7bb6906ac7b1f/execute/sync HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:33.820341" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:33.820341" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:33.820341" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-09T23:45:33.806328" elapsed="0.014013"/>
+</kw>
+<msg time="2026-03-09T23:45:33.820341" level="TRACE">Return: True</msg>
+<msg time="2026-03-09T23:45:33.820341" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>SeleniumLibrary.Wait until element is visible</arg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-03-09T23:45:33.805328" elapsed="0.015013"/>
+</kw>
+<if>
+<branch type="IF" condition="${status}">
+<return>
+<status status="PASS" start="2026-03-09T23:45:33.820341" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2026-03-09T23:45:33.820341" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-03-09T23:45:33.820341" elapsed="0.000000"/>
+</if>
+<var name="${i}">0</var>
+<status status="PASS" start="2026-03-09T23:45:33.805328" elapsed="0.015013"/>
+</iter>
+<var>${i}</var>
+<value>${max_attempt}</value>
+<status status="PASS" start="2026-03-09T23:45:33.805328" elapsed="0.015013"/>
+</for>
+<kw name="Fail" owner="BuiltIn">
+<arg>Element '${locator}' not visible after ${max_attempt} attempts</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-03-09T23:45:33.821341" elapsed="0.000000"/>
+</kw>
+<msg time="2026-03-09T23:45:33.821341" level="TRACE">Return: None</msg>
+<arg>locator=${heroku_login_locator.lbl_logout_success}</arg>
+<doc>Wait until element is visible with retry
+${max_attempt} e.g. by default is 3 rounds
+${timeout} e.g. by default is 40s</doc>
+<status status="PASS" start="2026-03-09T23:45:33.804328" elapsed="0.017013"/>
+</kw>
+<msg time="2026-03-09T23:45:33.821341" level="TRACE">Return: None</msg>
+<doc>Verify login success popup is displayed popup label is " You logged out of the secure area!"</doc>
+<status status="PASS" start="2026-03-09T23:45:33.802328" elapsed="0.019013"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2026-03-09T23:45:33.821341" level="TRACE">Arguments: [  ]</msg>
+<msg time="2026-03-09T23:45:33.821846" level="DEBUG">Closing all browsers.</msg>
+<msg time="2026-03-09T23:45:33.821846" level="DEBUG">DELETE http://localhost:65102/session/a12f00d9921fbad3cbb7bb6906ac7b1f {}</msg>
+<msg time="2026-03-09T23:45:33.888087" level="DEBUG">http://localhost:65102 "DELETE /session/a12f00d9921fbad3cbb7bb6906ac7b1f HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:33.888087" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:33.888087" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:35.929110" level="TRACE">Return: None</msg>
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-03-09T23:45:33.821341" elapsed="2.107769"/>
+</kw>
+<doc>To verify that users can login successfully when input a correct username and password.</doc>
+<tag>feature:login</tag>
+<tag>platform:web</tag>
+<tag>test_id:test_heroku_01</tag>
+<status status="PASS" start="2026-03-09T23:45:27.837966" elapsed="8.091144"/>
+</test>
+<test id="s1-s1-t2" name="Test_heroku_02 : Login failed - password incorrect" line="23">
+<kw name="Open heroku website" owner="common_web" type="SETUP">
+<msg time="2026-03-09T23:45:35.934631" level="TRACE">Arguments: [ ${url}='http://the-internet.herokuapp.com/login' ]</msg>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-09T23:45:35.934631" level="TRACE">Arguments: [ "sys.modules['selenium.webdriver'].ChromeOptions()" | 'sys, selenium.webdriver' ]</msg>
+<msg time="2026-03-09T23:45:35.934631" level="TRACE">Return: &lt;selenium.webdriver.chrome.options.Options object at 0x000001B73A2987D0&gt;</msg>
+<msg time="2026-03-09T23:45:35.934631" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001B73A2987D0&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-09T23:45:35.934631" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2026-03-09T23:45:35.935631" level="TRACE">Arguments: [ &lt;selenium.webdriver.chrome.options.Options object at 0x000001B73A2987D0&gt; | 'add_argument' | '--incognito' ]</msg>
+<msg time="2026-03-09T23:45:35.935631" level="TRACE">Return: None</msg>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-03-09T23:45:35.935631" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:35.935631" level="TRACE">Arguments: [ url='http://the-internet.herokuapp.com/login' | browser='chrome' | options=&lt;selenium.webdriver.chrome.options.Options object at 0x000001B73A2987D0&gt; ]</msg>
+<msg time="2026-03-09T23:45:35.935631" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/login'.</msg>
+<msg time="2026-03-09T23:45:35.936631" level="DEBUG">Selenium Manager binary found at: C:\Users\USER\OneDrive\เอกสาร\project_git\ttb_test_pavaret\assignment2-5\.venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe</msg>
+<msg time="2026-03-09T23:45:35.936631" level="DEBUG">Executing process: C:\Users\USER\OneDrive\เอกสาร\project_git\ttb_test_pavaret\assignment2-5\.venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --language-binding python --output json</msg>
+<msg time="2026-03-09T23:45:36.017038" level="DEBUG">Driver path: C:\chromedriver\chromedriver.exe</msg>
+<msg time="2026-03-09T23:45:36.017038" level="DEBUG">Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
+<msg time="2026-03-09T23:45:36.021543" level="DEBUG">Started executable: `C:\chromedriver\chromedriver.exe` in a child process with pid: 25940 using 0 to output -3</msg>
+<msg time="2026-03-09T23:45:36.537629" level="DEBUG">POST http://localhost:52422/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': &lt;PageLoadStrategy.normal: 'normal'&gt;, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': ['--incognito']}}}}</msg>
+<msg time="2026-03-09T23:45:36.538622" level="DEBUG">Starting new HTTP connection (1): localhost:52422</msg>
+<msg time="2026-03-09T23:45:37.054413" level="DEBUG">http://localhost:52422 "POST /session HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:37.054413" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"145.0.7632.160","chrome":{"chromedriverVersion":"145.0.7632.160 (662e0d7961bd91ebe77fe6c52f369e45647af51c-refs/branch-heads/7632@{#3674})","userDataDir":"C:\\Users\\USER\\AppData\\Local\\Temp\\scoped_dir25940_159845599"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:52428"},"goog:processID":28376,"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"6ae0d182b0903e66966829f8a0648f4d"}} | headers=HTTPHeaderDict({'Content-Length': '905', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:37.054413" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:37.054413" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/timeouts {'script': 5000}</msg>
+<msg time="2026-03-09T23:45:37.055412" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:37.055412" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:37.055412" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:37.055412" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/timeouts {'implicit': 0}</msg>
+<msg time="2026-03-09T23:45:37.056412" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:37.056412" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:37.056412" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:37.056412" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/timeouts {'pageLoad': 300000}</msg>
+<msg time="2026-03-09T23:45:37.056412" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:37.056412" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:37.056412" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:37.056412" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/url {'url': 'http://the-internet.herokuapp.com/login'}</msg>
+<msg time="2026-03-09T23:45:40.549003" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/url HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:40.551548" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:40.551548" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:40.551548" level="DEBUG">Opened browser with session id 6ae0d182b0903e66966829f8a0648f4d.</msg>
+<msg time="2026-03-09T23:45:40.552583" level="TRACE">Return: 1</msg>
+<arg>url=${url}</arg>
+<arg>browser=chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-09T23:45:35.935631" elapsed="4.616952"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:40.552583" level="TRACE">Arguments: [  ]</msg>
+<msg time="2026-03-09T23:45:40.552583" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/window/maximize {}</msg>
+<msg time="2026-03-09T23:45:40.583948" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/window/maximize HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:40.583948" level="DEBUG">Remote response: status=200 | data={"value":{"height":1048,"width":1936,"x":-8,"y":-8}} | headers=HTTPHeaderDict({'Content-Length': '52', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:40.583948" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:40.583948" level="TRACE">Return: None</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-09T23:45:40.552583" elapsed="0.031365"/>
+</kw>
+<msg time="2026-03-09T23:45:40.583948" level="TRACE">Return: None</msg>
+<doc>Open heroku website</doc>
+<status status="PASS" start="2026-03-09T23:45:35.934631" elapsed="4.649317"/>
+</kw>
+<kw name="Verify login page is displayed" owner="heroku_login_page">
+<msg time="2026-03-09T23:45:40.585034" level="TRACE">Arguments: [  ]</msg>
+<kw name="Wait until element is visible with retry" owner="common_web">
+<msg time="2026-03-09T23:45:40.586033" level="TRACE">Arguments: [ ${locator}='xpath=//div[@class="example"]/h2[text()="Login Page"]' | ${max_attempt}=3 | ${timeout}='40s' ]</msg>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<msg time="2026-03-09T23:45:40.587034" level="TRACE">Arguments: [ 'SeleniumLibrary.Wait until element is visible' | '${locator}' | '${timeout}' ]</msg>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:40.587034" level="TRACE">Arguments: [ 'xpath=//div[@class="example"]/h2[text()="Login Page"]' | datetime.timedelta(seconds=40) ]</msg>
+<msg time="2026-03-09T23:45:40.587034" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/elements {'using': 'xpath', 'value': '//div[@class="example"]/h2[text()="Login Page"]'}</msg>
+<msg time="2026-03-09T23:45:40.594284" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:40.594284" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.17"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:40.594284" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:40.594284" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){/*\n\n Copyright The Closure Library Authors.\n ...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.17'}]}</msg>
+<msg time="2026-03-09T23:45:40.599284" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/execute/sync HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:40.599284" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:40.599284" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:40.599284" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-09T23:45:40.587034" elapsed="0.012250"/>
+</kw>
+<msg time="2026-03-09T23:45:40.599284" level="TRACE">Return: True</msg>
+<msg time="2026-03-09T23:45:40.599284" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>SeleniumLibrary.Wait until element is visible</arg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-03-09T23:45:40.587034" elapsed="0.012250"/>
+</kw>
+<if>
+<branch type="IF" condition="${status}">
+<return>
+<status status="PASS" start="2026-03-09T23:45:40.599284" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2026-03-09T23:45:40.599284" elapsed="0.001001"/>
+</branch>
+<status status="PASS" start="2026-03-09T23:45:40.599284" elapsed="0.001001"/>
+</if>
+<var name="${i}">0</var>
+<status status="PASS" start="2026-03-09T23:45:40.586033" elapsed="0.014252"/>
+</iter>
+<var>${i}</var>
+<value>${max_attempt}</value>
+<status status="PASS" start="2026-03-09T23:45:40.586033" elapsed="0.014252"/>
+</for>
+<kw name="Fail" owner="BuiltIn">
+<arg>Element '${locator}' not visible after ${max_attempt} attempts</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-03-09T23:45:40.600285" elapsed="0.000000"/>
+</kw>
+<msg time="2026-03-09T23:45:40.600285" level="TRACE">Return: None</msg>
+<arg>locator=${heroku_login_locator.lbl_login}</arg>
+<doc>Wait until element is visible with retry
+${max_attempt} e.g. by default is 3 rounds
+${timeout} e.g. by default is 40s</doc>
+<status status="PASS" start="2026-03-09T23:45:40.586033" elapsed="0.014252"/>
+</kw>
+<msg time="2026-03-09T23:45:40.600285" level="TRACE">Return: None</msg>
+<doc>Verify login page is displayed label "Login Page"</doc>
+<status status="PASS" start="2026-03-09T23:45:40.585034" elapsed="0.015251"/>
+</kw>
+<kw name="Login to heroku" owner="heroku_login_feature">
+<msg time="2026-03-09T23:45:40.601787" level="TRACE">Arguments: [ ${username}='tomsmith' | ${password}='Password!' ]</msg>
+<kw name="Input username" owner="heroku_login_page">
+<msg time="2026-03-09T23:45:40.601787" level="TRACE">Arguments: [ ${username}='tomsmith' ]</msg>
+<kw name="Tap element and input text to element when ready" owner="common_web">
+<msg time="2026-03-09T23:45:40.602793" level="TRACE">Arguments: [ ${locator}='id=username' | ${text}='tomsmith' | ${timeout}='40s' ]</msg>
+<kw name="Wait until element is visible with retry" owner="common_web">
+<msg time="2026-03-09T23:45:40.603797" level="TRACE">Arguments: [ ${locator}='id=username' | ${max_attempt}=3 | ${timeout}='40s' ]</msg>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<msg time="2026-03-09T23:45:40.603797" level="TRACE">Arguments: [ 'SeleniumLibrary.Wait until element is visible' | '${locator}' | '${timeout}' ]</msg>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:40.603797" level="TRACE">Arguments: [ 'id=username' | datetime.timedelta(seconds=40) ]</msg>
+<msg time="2026-03-09T23:45:40.604798" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/elements {'using': 'css selector', 'value': '[id="username"]'}</msg>
+<msg time="2026-03-09T23:45:40.609831" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:40.609831" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.3"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:40.609831" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:40.609831" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){/*\n\n Copyright The Closure Library Authors.\n ...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.3'}]}</msg>
+<msg time="2026-03-09T23:45:40.613339" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/execute/sync HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:40.613339" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:40.613339" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:40.613339" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-09T23:45:40.603797" elapsed="0.009542"/>
+</kw>
+<msg time="2026-03-09T23:45:40.613339" level="TRACE">Return: True</msg>
+<msg time="2026-03-09T23:45:40.613339" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>SeleniumLibrary.Wait until element is visible</arg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-03-09T23:45:40.603797" elapsed="0.009542"/>
+</kw>
+<if>
+<branch type="IF" condition="${status}">
+<return>
+<status status="PASS" start="2026-03-09T23:45:40.614340" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2026-03-09T23:45:40.614340" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-03-09T23:45:40.613339" elapsed="0.001001"/>
+</if>
+<var name="${i}">0</var>
+<status status="PASS" start="2026-03-09T23:45:40.603797" elapsed="0.010543"/>
+</iter>
+<var>${i}</var>
+<value>${max_attempt}</value>
+<status status="PASS" start="2026-03-09T23:45:40.603797" elapsed="0.010543"/>
+</for>
+<kw name="Fail" owner="BuiltIn">
+<arg>Element '${locator}' not visible after ${max_attempt} attempts</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-03-09T23:45:40.614340" elapsed="0.000000"/>
+</kw>
+<msg time="2026-03-09T23:45:40.614340" level="TRACE">Return: None</msg>
+<arg>locator=${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Wait until element is visible with retry
+${max_attempt} e.g. by default is 3 rounds
+40s e.g. by default is 40s</doc>
+<status status="PASS" start="2026-03-09T23:45:40.602793" elapsed="0.011547"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:40.614340" level="TRACE">Arguments: [ 'id=username' ]</msg>
+<msg time="2026-03-09T23:45:40.614340" level="INFO">Clicking element 'id=username'.</msg>
+<msg time="2026-03-09T23:45:40.614340" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/elements {'using': 'css selector', 'value': '[id="username"]'}</msg>
+<msg time="2026-03-09T23:45:40.618338" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:40.618338" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.3"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:40.618338" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:40.618338" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/element/f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.3/click {}</msg>
+<msg time="2026-03-09T23:45:40.655044" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/element/f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.3/click HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:40.655044" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:40.655044" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:40.655044" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T23:45:40.614340" elapsed="0.040704"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:40.655044" level="TRACE">Arguments: [ 'id=username' | 'tomsmith' ]</msg>
+<msg time="2026-03-09T23:45:40.655044" level="INFO">Typing text 'tomsmith' into text field 'id=username'.</msg>
+<msg time="2026-03-09T23:45:40.655044" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/elements {'using': 'css selector', 'value': '[id="username"]'}</msg>
+<msg time="2026-03-09T23:45:40.660044" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:40.660044" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.3"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:40.660044" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:40.660044" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/element/f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.3/clear {}</msg>
+<msg time="2026-03-09T23:45:40.675218" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/element/f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.3/clear HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:40.675218" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:40.675218" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:40.675218" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/element/f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.3/value {'text': 'tomsmith', 'value': ['t', 'o', 'm', 's', 'm', 'i', 't', 'h']}</msg>
+<msg time="2026-03-09T23:45:40.694747" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/element/f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.3/value HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:40.694747" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:40.695746" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:40.695746" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T23:45:40.655044" elapsed="0.040702"/>
+</kw>
+<msg time="2026-03-09T23:45:40.695746" level="TRACE">Return: None</msg>
+<arg>locator=${heroku_login_locator.txt_username}</arg>
+<arg>text=${username}</arg>
+<doc>Tap element and input text to element when ready</doc>
+<status status="PASS" start="2026-03-09T23:45:40.601787" elapsed="0.093959"/>
+</kw>
+<msg time="2026-03-09T23:45:40.695746" level="TRACE">Return: None</msg>
+<arg>username=${username}</arg>
+<doc>Input username into username field
+tomsmith e.g. tomsmith</doc>
+<status status="PASS" start="2026-03-09T23:45:40.601787" elapsed="0.093959"/>
+</kw>
+<kw name="Input password" owner="heroku_login_page">
+<msg time="2026-03-09T23:45:40.695746" level="TRACE">Arguments: [ ${password}='Password!' ]</msg>
+<kw name="Tap element and input text to element when ready" owner="common_web">
+<msg time="2026-03-09T23:45:40.696748" level="TRACE">Arguments: [ ${locator}='id=password' | ${text}='Password!' | ${timeout}='40s' ]</msg>
+<kw name="Wait until element is visible with retry" owner="common_web">
+<msg time="2026-03-09T23:45:40.697750" level="TRACE">Arguments: [ ${locator}='id=password' | ${max_attempt}=3 | ${timeout}='40s' ]</msg>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<msg time="2026-03-09T23:45:40.697750" level="TRACE">Arguments: [ 'SeleniumLibrary.Wait until element is visible' | '${locator}' | '${timeout}' ]</msg>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:40.698749" level="TRACE">Arguments: [ 'id=password' | datetime.timedelta(seconds=40) ]</msg>
+<msg time="2026-03-09T23:45:40.698749" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/elements {'using': 'css selector', 'value': '[id="password"]'}</msg>
+<msg time="2026-03-09T23:45:40.704259" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:40.704259" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.4"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:40.704259" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:40.704259" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){/*\n\n Copyright The Closure Library Authors.\n ...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.4'}]}</msg>
+<msg time="2026-03-09T23:45:40.707762" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/execute/sync HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:40.707762" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:40.707762" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:40.707762" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-09T23:45:40.698749" elapsed="0.009013"/>
+</kw>
+<msg time="2026-03-09T23:45:40.707762" level="TRACE">Return: True</msg>
+<msg time="2026-03-09T23:45:40.707762" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>SeleniumLibrary.Wait until element is visible</arg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-03-09T23:45:40.697750" elapsed="0.010012"/>
+</kw>
+<if>
+<branch type="IF" condition="${status}">
+<return>
+<status status="PASS" start="2026-03-09T23:45:40.707762" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2026-03-09T23:45:40.707762" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-03-09T23:45:40.707762" elapsed="0.000000"/>
+</if>
+<var name="${i}">0</var>
+<status status="PASS" start="2026-03-09T23:45:40.697750" elapsed="0.010012"/>
+</iter>
+<var>${i}</var>
+<value>${max_attempt}</value>
+<status status="PASS" start="2026-03-09T23:45:40.697750" elapsed="0.010012"/>
+</for>
+<kw name="Fail" owner="BuiltIn">
+<arg>Element '${locator}' not visible after ${max_attempt} attempts</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-03-09T23:45:40.708770" elapsed="0.000000"/>
+</kw>
+<msg time="2026-03-09T23:45:40.708770" level="TRACE">Return: None</msg>
+<arg>locator=${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Wait until element is visible with retry
+${max_attempt} e.g. by default is 3 rounds
+40s e.g. by default is 40s</doc>
+<status status="PASS" start="2026-03-09T23:45:40.696748" elapsed="0.012022"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:40.708770" level="TRACE">Arguments: [ 'id=password' ]</msg>
+<msg time="2026-03-09T23:45:40.708770" level="INFO">Clicking element 'id=password'.</msg>
+<msg time="2026-03-09T23:45:40.708770" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/elements {'using': 'css selector', 'value': '[id="password"]'}</msg>
+<msg time="2026-03-09T23:45:40.712278" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:40.712278" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.4"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:40.712278" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:40.712278" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/element/f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.4/click {}</msg>
+<msg time="2026-03-09T23:45:40.739306" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/element/f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.4/click HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:40.739306" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:40.739306" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:40.739306" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T23:45:40.708770" elapsed="0.030536"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:40.739306" level="TRACE">Arguments: [ 'id=password' | 'Password!' ]</msg>
+<msg time="2026-03-09T23:45:40.739306" level="INFO">Typing text 'Password!' into text field 'id=password'.</msg>
+<msg time="2026-03-09T23:45:40.739306" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/elements {'using': 'css selector', 'value': '[id="password"]'}</msg>
+<msg time="2026-03-09T23:45:40.743336" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:40.743336" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.4"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:40.743336" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:40.743336" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/element/f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.4/clear {}</msg>
+<msg time="2026-03-09T23:45:40.754848" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/element/f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.4/clear HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:40.754848" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:40.755848" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:40.755848" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/element/f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.4/value {'text': 'Password!', 'value': ['P', 'a', 's', 's', 'w', 'o', 'r', 'd', '!']}</msg>
+<msg time="2026-03-09T23:45:40.772416" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/element/f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.4/value HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:40.772416" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:40.772416" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:40.772416" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T23:45:40.739306" elapsed="0.033110"/>
+</kw>
+<msg time="2026-03-09T23:45:40.772416" level="TRACE">Return: None</msg>
+<arg>locator=${heroku_login_locator.txt_password}</arg>
+<arg>text=${password}</arg>
+<doc>Tap element and input text to element when ready</doc>
+<status status="PASS" start="2026-03-09T23:45:40.695746" elapsed="0.076670"/>
+</kw>
+<msg time="2026-03-09T23:45:40.772416" level="TRACE">Return: None</msg>
+<arg>password=${password}</arg>
+<doc>Input password into password field
+Password! e.g. SuperSecretPassword!</doc>
+<status status="PASS" start="2026-03-09T23:45:40.695746" elapsed="0.076670"/>
+</kw>
+<kw name="Click login button" owner="heroku_login_page">
+<msg time="2026-03-09T23:45:40.772416" level="TRACE">Arguments: [  ]</msg>
+<kw name="Tap element when ready" owner="common_web">
+<msg time="2026-03-09T23:45:40.773415" level="TRACE">Arguments: [ ${locator}='xpath=//button[@type="submit"]' | ${timeout}='40s' ]</msg>
+<kw name="Wait until element is visible with retry" owner="common_web">
+<msg time="2026-03-09T23:45:40.774415" level="TRACE">Arguments: [ ${locator}='xpath=//button[@type="submit"]' | ${max_attempt}=3 | ${timeout}='40s' ]</msg>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<msg time="2026-03-09T23:45:40.774921" level="TRACE">Arguments: [ 'SeleniumLibrary.Wait until element is visible' | '${locator}' | '${timeout}' ]</msg>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:40.774921" level="TRACE">Arguments: [ 'xpath=//button[@type="submit"]' | datetime.timedelta(seconds=40) ]</msg>
+<msg time="2026-03-09T23:45:40.774921" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/elements {'using': 'xpath', 'value': '//button[@type="submit"]'}</msg>
+<msg time="2026-03-09T23:45:40.780930" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:40.780930" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.5"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:40.780930" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:40.780930" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){/*\n\n Copyright The Closure Library Authors.\n ...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.5'}]}</msg>
+<msg time="2026-03-09T23:45:40.784551" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/execute/sync HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:40.785556" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:40.785556" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:40.785556" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-09T23:45:40.774921" elapsed="0.010635"/>
+</kw>
+<msg time="2026-03-09T23:45:40.785556" level="TRACE">Return: True</msg>
+<msg time="2026-03-09T23:45:40.785556" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>SeleniumLibrary.Wait until element is visible</arg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-03-09T23:45:40.774921" elapsed="0.010635"/>
+</kw>
+<if>
+<branch type="IF" condition="${status}">
+<return>
+<status status="PASS" start="2026-03-09T23:45:40.785556" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2026-03-09T23:45:40.785556" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-03-09T23:45:40.785556" elapsed="0.000000"/>
+</if>
+<var name="${i}">0</var>
+<status status="PASS" start="2026-03-09T23:45:40.774415" elapsed="0.011141"/>
+</iter>
+<var>${i}</var>
+<value>${max_attempt}</value>
+<status status="PASS" start="2026-03-09T23:45:40.774415" elapsed="0.011141"/>
+</for>
+<kw name="Fail" owner="BuiltIn">
+<arg>Element '${locator}' not visible after ${max_attempt} attempts</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-03-09T23:45:40.785556" elapsed="0.000000"/>
+</kw>
+<msg time="2026-03-09T23:45:40.785556" level="TRACE">Return: None</msg>
+<arg>locator=${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Wait until element is visible with retry
+${max_attempt} e.g. by default is 3 rounds
+40s e.g. by default is 40s</doc>
+<status status="PASS" start="2026-03-09T23:45:40.773415" elapsed="0.012141"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:40.786556" level="TRACE">Arguments: [ 'xpath=//button[@type="submit"]' ]</msg>
+<msg time="2026-03-09T23:45:40.786556" level="INFO">Clicking element 'xpath=//button[@type="submit"]'.</msg>
+<msg time="2026-03-09T23:45:40.786556" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/elements {'using': 'xpath', 'value': '//button[@type="submit"]'}</msg>
+<msg time="2026-03-09T23:45:40.789556" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:40.789556" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.5"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:40.789556" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:40.789556" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/element/f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.5/click {}</msg>
+<msg time="2026-03-09T23:45:40.815607" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/element/f.8553EBED986DEDB874EFCDFD66A4D361.d.B2A3E09AC59178DB4B4AE7F44B1FD033.e.5/click HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:40.815607" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:40.815607" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:40.815607" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T23:45:40.785556" elapsed="0.030051"/>
+</kw>
+<msg time="2026-03-09T23:45:40.815607" level="TRACE">Return: None</msg>
+<arg>locator=${heroku_login_locator.btn_login}</arg>
+<doc>Tap element when element is ready</doc>
+<status status="PASS" start="2026-03-09T23:45:40.772416" elapsed="0.043191"/>
+</kw>
+<msg time="2026-03-09T23:45:40.815607" level="TRACE">Return: None</msg>
+<doc>Click login button</doc>
+<status status="PASS" start="2026-03-09T23:45:40.772416" elapsed="0.043191"/>
+</kw>
+<msg time="2026-03-09T23:45:40.815607" level="TRACE">Return: None</msg>
+<arg>username=${assignment2.test_heroku_02.username}</arg>
+<arg>password=${assignment2.test_heroku_02.password}</arg>
+<doc>This feature use for login to heroku in login page
+${username} e.g. tomsmith
+${password} e.g. SuperSecretPassword!</doc>
+<status status="PASS" start="2026-03-09T23:45:40.601284" elapsed="0.214323"/>
+</kw>
+<kw name="Verify login password failed popup is displayed" owner="heroku_login_page">
+<msg time="2026-03-09T23:45:40.816606" level="TRACE">Arguments: [  ]</msg>
+<kw name="Wait until element is visible with retry" owner="common_web">
+<msg time="2026-03-09T23:45:40.817605" level="TRACE">Arguments: [ ${locator}='xpath=//div[@id="flash" and contains(text(),"Your password is invalid!")]' | ${max_attempt}=3 | ${timeout}='40s' ]</msg>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<msg time="2026-03-09T23:45:40.818606" level="TRACE">Arguments: [ 'SeleniumLibrary.Wait until element is visible' | '${locator}' | '${timeout}' ]</msg>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:40.818606" level="TRACE">Arguments: [ 'xpath=//div[@id="flash" and contains(text(),"Your password is invalid!")]' | datetime.timedelta(seconds=40) ]</msg>
+<msg time="2026-03-09T23:45:40.818606" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/elements {'using': 'xpath', 'value': '//div[@id="flash" and contains(text(),"Your password is invalid!")]'}</msg>
+<msg time="2026-03-09T23:45:41.380310" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:41.380310" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.8553EBED986DEDB874EFCDFD66A4D361.d.4C427283DFA19FF4A60C4F6D5AF1A327.e.24"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:41.380310" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:41.380310" level="DEBUG">POST http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){/*\n\n Copyright The Closure Library Authors.\n ...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.8553EBED986DEDB874EFCDFD66A4D361.d.4C427283DFA19FF4A60C4F6D5AF1A327.e.24'}]}</msg>
+<msg time="2026-03-09T23:45:41.386335" level="DEBUG">http://localhost:52422 "POST /session/6ae0d182b0903e66966829f8a0648f4d/execute/sync HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:41.386335" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:41.386335" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:41.386335" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-09T23:45:40.818606" elapsed="0.567729"/>
+</kw>
+<msg time="2026-03-09T23:45:41.386335" level="TRACE">Return: True</msg>
+<msg time="2026-03-09T23:45:41.386335" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>SeleniumLibrary.Wait until element is visible</arg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-03-09T23:45:40.818606" elapsed="0.567729"/>
+</kw>
+<if>
+<branch type="IF" condition="${status}">
+<return>
+<status status="PASS" start="2026-03-09T23:45:41.386335" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2026-03-09T23:45:41.386335" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-03-09T23:45:41.386335" elapsed="0.000000"/>
+</if>
+<var name="${i}">0</var>
+<status status="PASS" start="2026-03-09T23:45:40.818606" elapsed="0.567729"/>
+</iter>
+<var>${i}</var>
+<value>${max_attempt}</value>
+<status status="PASS" start="2026-03-09T23:45:40.817605" elapsed="0.568730"/>
+</for>
+<kw name="Fail" owner="BuiltIn">
+<arg>Element '${locator}' not visible after ${max_attempt} attempts</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-03-09T23:45:41.387338" elapsed="0.000000"/>
+</kw>
+<msg time="2026-03-09T23:45:41.387338" level="TRACE">Return: None</msg>
+<arg>locator=${heroku_login_locator.lbl_login_password_failed}</arg>
+<doc>Wait until element is visible with retry
+${max_attempt} e.g. by default is 3 rounds
+${timeout} e.g. by default is 40s</doc>
+<status status="PASS" start="2026-03-09T23:45:40.817605" elapsed="0.569733"/>
+</kw>
+<msg time="2026-03-09T23:45:41.387338" level="TRACE">Return: None</msg>
+<doc>Verify login password failed popup is displayed popup label is "Your password is invalid!"</doc>
+<status status="PASS" start="2026-03-09T23:45:40.815607" elapsed="0.571731"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2026-03-09T23:45:41.387338" level="TRACE">Arguments: [  ]</msg>
+<msg time="2026-03-09T23:45:41.387338" level="DEBUG">Closing all browsers.</msg>
+<msg time="2026-03-09T23:45:41.387338" level="DEBUG">DELETE http://localhost:52422/session/6ae0d182b0903e66966829f8a0648f4d {}</msg>
+<msg time="2026-03-09T23:45:41.428894" level="DEBUG">http://localhost:52422 "DELETE /session/6ae0d182b0903e66966829f8a0648f4d HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:41.428894" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:41.428894" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:43.475484" level="TRACE">Return: None</msg>
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-03-09T23:45:41.387338" elapsed="2.088146"/>
+</kw>
+<doc>To verify that users can login unsuccessfully when they input a correct username but wrong password.</doc>
+<tag>feature:login</tag>
+<tag>platform:web</tag>
+<tag>test_id:test_heroku_02</tag>
+<status status="PASS" start="2026-03-09T23:45:35.933632" elapsed="7.542851"/>
+</test>
+<test id="s1-s1-t3" name="Test_heroku_03 : Login failed - username not found" line="33">
+<kw name="Open heroku website" owner="common_web" type="SETUP">
+<msg time="2026-03-09T23:45:43.483032" level="TRACE">Arguments: [ ${url}='http://the-internet.herokuapp.com/login' ]</msg>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-03-09T23:45:43.484029" level="TRACE">Arguments: [ "sys.modules['selenium.webdriver'].ChromeOptions()" | 'sys, selenium.webdriver' ]</msg>
+<msg time="2026-03-09T23:45:43.484029" level="TRACE">Return: &lt;selenium.webdriver.chrome.options.Options object at 0x000001B73A27CAD0&gt;</msg>
+<msg time="2026-03-09T23:45:43.485027" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001B73A27CAD0&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-03-09T23:45:43.483032" elapsed="0.001995"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2026-03-09T23:45:43.485542" level="TRACE">Arguments: [ &lt;selenium.webdriver.chrome.options.Options object at 0x000001B73A27CAD0&gt; | 'add_argument' | '--incognito' ]</msg>
+<msg time="2026-03-09T23:45:43.485542" level="TRACE">Return: None</msg>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-03-09T23:45:43.485027" elapsed="0.000515"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:43.486550" level="TRACE">Arguments: [ url='http://the-internet.herokuapp.com/login' | browser='chrome' | options=&lt;selenium.webdriver.chrome.options.Options object at 0x000001B73A27CAD0&gt; ]</msg>
+<msg time="2026-03-09T23:45:43.486550" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/login'.</msg>
+<msg time="2026-03-09T23:45:43.487549" level="DEBUG">Selenium Manager binary found at: C:\Users\USER\OneDrive\เอกสาร\project_git\ttb_test_pavaret\assignment2-5\.venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe</msg>
+<msg time="2026-03-09T23:45:43.487549" level="DEBUG">Executing process: C:\Users\USER\OneDrive\เอกสาร\project_git\ttb_test_pavaret\assignment2-5\.venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --language-binding python --output json</msg>
+<msg time="2026-03-09T23:45:43.560030" level="DEBUG">Driver path: C:\chromedriver\chromedriver.exe</msg>
+<msg time="2026-03-09T23:45:43.560030" level="DEBUG">Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
+<msg time="2026-03-09T23:45:43.564542" level="DEBUG">Started executable: `C:\chromedriver\chromedriver.exe` in a child process with pid: 26164 using 0 to output -3</msg>
+<msg time="2026-03-09T23:45:44.083660" level="DEBUG">POST http://localhost:63961/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': &lt;PageLoadStrategy.normal: 'normal'&gt;, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': ['--incognito']}}}}</msg>
+<msg time="2026-03-09T23:45:44.085311" level="DEBUG">Starting new HTTP connection (1): localhost:63961</msg>
+<msg time="2026-03-09T23:45:44.537023" level="DEBUG">http://localhost:63961 "POST /session HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:44.537023" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"145.0.7632.160","chrome":{"chromedriverVersion":"145.0.7632.160 (662e0d7961bd91ebe77fe6c52f369e45647af51c-refs/branch-heads/7632@{#3674})","userDataDir":"C:\\Users\\USER\\AppData\\Local\\Temp\\scoped_dir26164_1358926462"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:63966"},"goog:processID":396,"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"8863a2ad810d48fba07b5a5e439f34de"}} | headers=HTTPHeaderDict({'Content-Length': '904', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:44.537023" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:44.537023" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/timeouts {'script': 5000}</msg>
+<msg time="2026-03-09T23:45:44.538023" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:44.538023" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:44.538023" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:44.538023" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/timeouts {'implicit': 0}</msg>
+<msg time="2026-03-09T23:45:44.538023" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:44.538023" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:44.538023" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:44.538023" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/timeouts {'pageLoad': 300000}</msg>
+<msg time="2026-03-09T23:45:44.539022" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:44.539022" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:44.539022" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:44.539022" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/url {'url': 'http://the-internet.herokuapp.com/login'}</msg>
+<msg time="2026-03-09T23:45:47.900129" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/url HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:47.900129" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:47.900129" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:47.901126" level="DEBUG">Opened browser with session id 8863a2ad810d48fba07b5a5e439f34de.</msg>
+<msg time="2026-03-09T23:45:47.901126" level="TRACE">Return: 1</msg>
+<arg>url=${url}</arg>
+<arg>browser=chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-09T23:45:43.485542" elapsed="4.415584"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:47.901654" level="TRACE">Arguments: [  ]</msg>
+<msg time="2026-03-09T23:45:47.902681" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/window/maximize {}</msg>
+<msg time="2026-03-09T23:45:47.934241" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/window/maximize HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:47.934241" level="DEBUG">Remote response: status=200 | data={"value":{"height":1048,"width":1936,"x":-8,"y":-8}} | headers=HTTPHeaderDict({'Content-Length': '52', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:47.934241" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:47.934241" level="TRACE">Return: None</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-09T23:45:47.901654" elapsed="0.032587"/>
+</kw>
+<msg time="2026-03-09T23:45:47.935241" level="TRACE">Return: None</msg>
+<doc>Open heroku website</doc>
+<status status="PASS" start="2026-03-09T23:45:43.482032" elapsed="4.453209"/>
+</kw>
+<kw name="Verify login page is displayed" owner="heroku_login_page">
+<msg time="2026-03-09T23:45:47.935241" level="TRACE">Arguments: [  ]</msg>
+<kw name="Wait until element is visible with retry" owner="common_web">
+<msg time="2026-03-09T23:45:47.937240" level="TRACE">Arguments: [ ${locator}='xpath=//div[@class="example"]/h2[text()="Login Page"]' | ${max_attempt}=3 | ${timeout}='40s' ]</msg>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<msg time="2026-03-09T23:45:47.937240" level="TRACE">Arguments: [ 'SeleniumLibrary.Wait until element is visible' | '${locator}' | '${timeout}' ]</msg>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:47.937240" level="TRACE">Arguments: [ 'xpath=//div[@class="example"]/h2[text()="Login Page"]' | datetime.timedelta(seconds=40) ]</msg>
+<msg time="2026-03-09T23:45:47.937240" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/elements {'using': 'xpath', 'value': '//div[@class="example"]/h2[text()="Login Page"]'}</msg>
+<msg time="2026-03-09T23:45:47.943502" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:47.944503" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.17"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:47.944503" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:47.944503" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){/*\n\n Copyright The Closure Library Authors.\n ...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.17'}]}</msg>
+<msg time="2026-03-09T23:45:47.949503" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/execute/sync HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:47.949503" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:47.949503" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:47.949503" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-09T23:45:47.937240" elapsed="0.012263"/>
+</kw>
+<msg time="2026-03-09T23:45:47.949503" level="TRACE">Return: True</msg>
+<msg time="2026-03-09T23:45:47.949503" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>SeleniumLibrary.Wait until element is visible</arg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-03-09T23:45:47.937240" elapsed="0.012263"/>
+</kw>
+<if>
+<branch type="IF" condition="${status}">
+<return>
+<status status="PASS" start="2026-03-09T23:45:47.949503" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2026-03-09T23:45:47.949503" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-03-09T23:45:47.949503" elapsed="0.000000"/>
+</if>
+<var name="${i}">0</var>
+<status status="PASS" start="2026-03-09T23:45:47.937240" elapsed="0.012263"/>
+</iter>
+<var>${i}</var>
+<value>${max_attempt}</value>
+<status status="PASS" start="2026-03-09T23:45:47.937240" elapsed="0.012263"/>
+</for>
+<kw name="Fail" owner="BuiltIn">
+<arg>Element '${locator}' not visible after ${max_attempt} attempts</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-03-09T23:45:47.949503" elapsed="0.000000"/>
+</kw>
+<msg time="2026-03-09T23:45:47.949503" level="TRACE">Return: None</msg>
+<arg>locator=${heroku_login_locator.lbl_login}</arg>
+<doc>Wait until element is visible with retry
+${max_attempt} e.g. by default is 3 rounds
+${timeout} e.g. by default is 40s</doc>
+<status status="PASS" start="2026-03-09T23:45:47.936242" elapsed="0.013261"/>
+</kw>
+<msg time="2026-03-09T23:45:47.949503" level="TRACE">Return: None</msg>
+<doc>Verify login page is displayed label "Login Page"</doc>
+<status status="PASS" start="2026-03-09T23:45:47.935241" elapsed="0.014262"/>
+</kw>
+<kw name="Login to heroku" owner="heroku_login_feature">
+<msg time="2026-03-09T23:45:47.952011" level="TRACE">Arguments: [ ${username}='tomholland' | ${password}='Password!' ]</msg>
+<kw name="Input username" owner="heroku_login_page">
+<msg time="2026-03-09T23:45:47.952011" level="TRACE">Arguments: [ ${username}='tomholland' ]</msg>
+<kw name="Tap element and input text to element when ready" owner="common_web">
+<msg time="2026-03-09T23:45:47.953011" level="TRACE">Arguments: [ ${locator}='id=username' | ${text}='tomholland' | ${timeout}='40s' ]</msg>
+<kw name="Wait until element is visible with retry" owner="common_web">
+<msg time="2026-03-09T23:45:47.954010" level="TRACE">Arguments: [ ${locator}='id=username' | ${max_attempt}=3 | ${timeout}='40s' ]</msg>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<msg time="2026-03-09T23:45:47.954010" level="TRACE">Arguments: [ 'SeleniumLibrary.Wait until element is visible' | '${locator}' | '${timeout}' ]</msg>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:47.954010" level="TRACE">Arguments: [ 'id=username' | datetime.timedelta(seconds=40) ]</msg>
+<msg time="2026-03-09T23:45:47.955010" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/elements {'using': 'css selector', 'value': '[id="username"]'}</msg>
+<msg time="2026-03-09T23:45:47.960010" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:47.960010" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.3"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:47.960010" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:47.960010" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){/*\n\n Copyright The Closure Library Authors.\n ...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.3'}]}</msg>
+<msg time="2026-03-09T23:45:47.964058" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/execute/sync HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:47.964058" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:47.964058" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:47.964058" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-09T23:45:47.954010" elapsed="0.010048"/>
+</kw>
+<msg time="2026-03-09T23:45:47.964058" level="TRACE">Return: True</msg>
+<msg time="2026-03-09T23:45:47.964058" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>SeleniumLibrary.Wait until element is visible</arg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-03-09T23:45:47.954010" elapsed="0.010048"/>
+</kw>
+<if>
+<branch type="IF" condition="${status}">
+<return>
+<status status="PASS" start="2026-03-09T23:45:47.964058" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2026-03-09T23:45:47.964058" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-03-09T23:45:47.964058" elapsed="0.000000"/>
+</if>
+<var name="${i}">0</var>
+<status status="PASS" start="2026-03-09T23:45:47.954010" elapsed="0.010048"/>
+</iter>
+<var>${i}</var>
+<value>${max_attempt}</value>
+<status status="PASS" start="2026-03-09T23:45:47.954010" elapsed="0.010048"/>
+</for>
+<kw name="Fail" owner="BuiltIn">
+<arg>Element '${locator}' not visible after ${max_attempt} attempts</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-03-09T23:45:47.964058" elapsed="0.000000"/>
+</kw>
+<msg time="2026-03-09T23:45:47.965058" level="TRACE">Return: None</msg>
+<arg>locator=${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Wait until element is visible with retry
+${max_attempt} e.g. by default is 3 rounds
+40s e.g. by default is 40s</doc>
+<status status="PASS" start="2026-03-09T23:45:47.953011" elapsed="0.012047"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:47.965058" level="TRACE">Arguments: [ 'id=username' ]</msg>
+<msg time="2026-03-09T23:45:47.965058" level="INFO">Clicking element 'id=username'.</msg>
+<msg time="2026-03-09T23:45:47.965058" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/elements {'using': 'css selector', 'value': '[id="username"]'}</msg>
+<msg time="2026-03-09T23:45:47.968056" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:47.969055" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.3"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:47.969055" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:47.969055" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/element/f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.3/click {}</msg>
+<msg time="2026-03-09T23:45:48.004838" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/element/f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.3/click HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:48.004838" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:48.004838" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:48.004838" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T23:45:47.965058" elapsed="0.039780"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:48.005839" level="TRACE">Arguments: [ 'id=username' | 'tomholland' ]</msg>
+<msg time="2026-03-09T23:45:48.005839" level="INFO">Typing text 'tomholland' into text field 'id=username'.</msg>
+<msg time="2026-03-09T23:45:48.005839" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/elements {'using': 'css selector', 'value': '[id="username"]'}</msg>
+<msg time="2026-03-09T23:45:48.009934" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:48.009934" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.3"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:48.009934" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:48.009934" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/element/f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.3/clear {}</msg>
+<msg time="2026-03-09T23:45:48.025030" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/element/f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.3/clear HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:48.025030" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:48.025030" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:48.026031" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/element/f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.3/value {'text': 'tomholland', 'value': ['t', 'o', 'm', 'h', 'o', 'l', 'l', 'a', 'n', 'd']}</msg>
+<msg time="2026-03-09T23:45:48.050197" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/element/f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.3/value HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:48.050197" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:48.050197" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:48.050197" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T23:45:48.005839" elapsed="0.044358"/>
+</kw>
+<msg time="2026-03-09T23:45:48.050197" level="TRACE">Return: None</msg>
+<arg>locator=${heroku_login_locator.txt_username}</arg>
+<arg>text=${username}</arg>
+<doc>Tap element and input text to element when ready</doc>
+<status status="PASS" start="2026-03-09T23:45:47.952011" elapsed="0.098186"/>
+</kw>
+<msg time="2026-03-09T23:45:48.050197" level="TRACE">Return: None</msg>
+<arg>username=${username}</arg>
+<doc>Input username into username field
+tomholland e.g. tomsmith</doc>
+<status status="PASS" start="2026-03-09T23:45:47.952011" elapsed="0.098186"/>
+</kw>
+<kw name="Input password" owner="heroku_login_page">
+<msg time="2026-03-09T23:45:48.051196" level="TRACE">Arguments: [ ${password}='Password!' ]</msg>
+<kw name="Tap element and input text to element when ready" owner="common_web">
+<msg time="2026-03-09T23:45:48.051704" level="TRACE">Arguments: [ ${locator}='id=password' | ${text}='Password!' | ${timeout}='40s' ]</msg>
+<kw name="Wait until element is visible with retry" owner="common_web">
+<msg time="2026-03-09T23:45:48.052709" level="TRACE">Arguments: [ ${locator}='id=password' | ${max_attempt}=3 | ${timeout}='40s' ]</msg>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<msg time="2026-03-09T23:45:48.052709" level="TRACE">Arguments: [ 'SeleniumLibrary.Wait until element is visible' | '${locator}' | '${timeout}' ]</msg>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:48.052709" level="TRACE">Arguments: [ 'id=password' | datetime.timedelta(seconds=40) ]</msg>
+<msg time="2026-03-09T23:45:48.052709" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/elements {'using': 'css selector', 'value': '[id="password"]'}</msg>
+<msg time="2026-03-09T23:45:48.058709" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:48.058709" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.4"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:48.058709" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:48.058709" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){/*\n\n Copyright The Closure Library Authors.\n ...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.4'}]}</msg>
+<msg time="2026-03-09T23:45:48.061213" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/execute/sync HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:48.061213" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:48.061213" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:48.061213" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-09T23:45:48.052709" elapsed="0.009509"/>
+</kw>
+<msg time="2026-03-09T23:45:48.062218" level="TRACE">Return: True</msg>
+<msg time="2026-03-09T23:45:48.062218" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>SeleniumLibrary.Wait until element is visible</arg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-03-09T23:45:48.052709" elapsed="0.009509"/>
+</kw>
+<if>
+<branch type="IF" condition="${status}">
+<return>
+<status status="PASS" start="2026-03-09T23:45:48.062218" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2026-03-09T23:45:48.062218" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-03-09T23:45:48.062218" elapsed="0.000000"/>
+</if>
+<var name="${i}">0</var>
+<status status="PASS" start="2026-03-09T23:45:48.052709" elapsed="0.009509"/>
+</iter>
+<var>${i}</var>
+<value>${max_attempt}</value>
+<status status="PASS" start="2026-03-09T23:45:48.052709" elapsed="0.009509"/>
+</for>
+<kw name="Fail" owner="BuiltIn">
+<arg>Element '${locator}' not visible after ${max_attempt} attempts</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-03-09T23:45:48.062218" elapsed="0.000000"/>
+</kw>
+<msg time="2026-03-09T23:45:48.062218" level="TRACE">Return: None</msg>
+<arg>locator=${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Wait until element is visible with retry
+${max_attempt} e.g. by default is 3 rounds
+40s e.g. by default is 40s</doc>
+<status status="PASS" start="2026-03-09T23:45:48.051704" elapsed="0.010514"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:48.062218" level="TRACE">Arguments: [ 'id=password' ]</msg>
+<msg time="2026-03-09T23:45:48.062218" level="INFO">Clicking element 'id=password'.</msg>
+<msg time="2026-03-09T23:45:48.062218" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/elements {'using': 'css selector', 'value': '[id="password"]'}</msg>
+<msg time="2026-03-09T23:45:48.067218" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:48.067218" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.4"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:48.067218" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:48.067218" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/element/f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.4/click {}</msg>
+<msg time="2026-03-09T23:45:48.093301" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/element/f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.4/click HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:48.093301" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:48.093301" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:48.093301" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T23:45:48.062218" elapsed="0.031083"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:48.093301" level="TRACE">Arguments: [ 'id=password' | 'Password!' ]</msg>
+<msg time="2026-03-09T23:45:48.093301" level="INFO">Typing text 'Password!' into text field 'id=password'.</msg>
+<msg time="2026-03-09T23:45:48.093301" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/elements {'using': 'css selector', 'value': '[id="password"]'}</msg>
+<msg time="2026-03-09T23:45:48.097302" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:48.097302" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.4"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:48.097302" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:48.097302" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/element/f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.4/clear {}</msg>
+<msg time="2026-03-09T23:45:48.108321" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/element/f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.4/clear HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:48.108321" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:48.108321" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:48.108321" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/element/f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.4/value {'text': 'Password!', 'value': ['P', 'a', 's', 's', 'w', 'o', 'r', 'd', '!']}</msg>
+<msg time="2026-03-09T23:45:48.125366" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/element/f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.4/value HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:48.125366" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:48.125366" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:48.125366" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T23:45:48.093301" elapsed="0.032065"/>
+</kw>
+<msg time="2026-03-09T23:45:48.125366" level="TRACE">Return: None</msg>
+<arg>locator=${heroku_login_locator.txt_password}</arg>
+<arg>text=${password}</arg>
+<doc>Tap element and input text to element when ready</doc>
+<status status="PASS" start="2026-03-09T23:45:48.051196" elapsed="0.074170"/>
+</kw>
+<msg time="2026-03-09T23:45:48.125366" level="TRACE">Return: None</msg>
+<arg>password=${password}</arg>
+<doc>Input password into password field
+Password! e.g. SuperSecretPassword!</doc>
+<status status="PASS" start="2026-03-09T23:45:48.050197" elapsed="0.075169"/>
+</kw>
+<kw name="Click login button" owner="heroku_login_page">
+<msg time="2026-03-09T23:45:48.125366" level="TRACE">Arguments: [  ]</msg>
+<kw name="Tap element when ready" owner="common_web">
+<msg time="2026-03-09T23:45:48.126366" level="TRACE">Arguments: [ ${locator}='xpath=//button[@type="submit"]' | ${timeout}='40s' ]</msg>
+<kw name="Wait until element is visible with retry" owner="common_web">
+<msg time="2026-03-09T23:45:48.127365" level="TRACE">Arguments: [ ${locator}='xpath=//button[@type="submit"]' | ${max_attempt}=3 | ${timeout}='40s' ]</msg>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<msg time="2026-03-09T23:45:48.127365" level="TRACE">Arguments: [ 'SeleniumLibrary.Wait until element is visible' | '${locator}' | '${timeout}' ]</msg>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:48.127365" level="TRACE">Arguments: [ 'xpath=//button[@type="submit"]' | datetime.timedelta(seconds=40) ]</msg>
+<msg time="2026-03-09T23:45:48.128365" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/elements {'using': 'xpath', 'value': '//button[@type="submit"]'}</msg>
+<msg time="2026-03-09T23:45:48.133880" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:48.133880" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.5"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:48.133880" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:48.133880" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){/*\n\n Copyright The Closure Library Authors.\n ...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.5'}]}</msg>
+<msg time="2026-03-09T23:45:48.137878" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/execute/sync HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:48.137878" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:48.137878" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:48.137878" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-09T23:45:48.127365" elapsed="0.010513"/>
+</kw>
+<msg time="2026-03-09T23:45:48.137878" level="TRACE">Return: True</msg>
+<msg time="2026-03-09T23:45:48.137878" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>SeleniumLibrary.Wait until element is visible</arg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-03-09T23:45:48.127365" elapsed="0.010513"/>
+</kw>
+<if>
+<branch type="IF" condition="${status}">
+<return>
+<status status="PASS" start="2026-03-09T23:45:48.137878" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2026-03-09T23:45:48.137878" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-03-09T23:45:48.137878" elapsed="0.000000"/>
+</if>
+<var name="${i}">0</var>
+<status status="PASS" start="2026-03-09T23:45:48.127365" elapsed="0.010513"/>
+</iter>
+<var>${i}</var>
+<value>${max_attempt}</value>
+<status status="PASS" start="2026-03-09T23:45:48.127365" elapsed="0.010513"/>
+</for>
+<kw name="Fail" owner="BuiltIn">
+<arg>Element '${locator}' not visible after ${max_attempt} attempts</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-03-09T23:45:48.137878" elapsed="0.000000"/>
+</kw>
+<msg time="2026-03-09T23:45:48.137878" level="TRACE">Return: None</msg>
+<arg>locator=${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Wait until element is visible with retry
+${max_attempt} e.g. by default is 3 rounds
+40s e.g. by default is 40s</doc>
+<status status="PASS" start="2026-03-09T23:45:48.126366" elapsed="0.012512"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:48.138878" level="TRACE">Arguments: [ 'xpath=//button[@type="submit"]' ]</msg>
+<msg time="2026-03-09T23:45:48.138878" level="INFO">Clicking element 'xpath=//button[@type="submit"]'.</msg>
+<msg time="2026-03-09T23:45:48.138878" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/elements {'using': 'xpath', 'value': '//button[@type="submit"]'}</msg>
+<msg time="2026-03-09T23:45:48.142390" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:48.142390" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.5"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:48.142390" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:48.142390" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/element/f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.5/click {}</msg>
+<msg time="2026-03-09T23:45:48.168421" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/element/f.7DA61FB77F25CF7B5411E1D70727CC57.d.658FB617F5D8B000A29A2BB802BE3E56.e.5/click HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:48.168421" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:48.168421" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:48.168421" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T23:45:48.138878" elapsed="0.029543"/>
+</kw>
+<msg time="2026-03-09T23:45:48.168421" level="TRACE">Return: None</msg>
+<arg>locator=${heroku_login_locator.btn_login}</arg>
+<doc>Tap element when element is ready</doc>
+<status status="PASS" start="2026-03-09T23:45:48.125366" elapsed="0.043055"/>
+</kw>
+<msg time="2026-03-09T23:45:48.168421" level="TRACE">Return: None</msg>
+<doc>Click login button</doc>
+<status status="PASS" start="2026-03-09T23:45:48.125366" elapsed="0.043055"/>
+</kw>
+<msg time="2026-03-09T23:45:48.168421" level="TRACE">Return: None</msg>
+<arg>username=${assignment2.test_heroku_03.username}</arg>
+<arg>password=${assignment2.test_heroku_03.password}</arg>
+<doc>This feature use for login to heroku in login page
+${username} e.g. tomsmith
+${password} e.g. SuperSecretPassword!</doc>
+<status status="PASS" start="2026-03-09T23:45:47.951007" elapsed="0.217414"/>
+</kw>
+<kw name="Verify login username failed popup is displayed" owner="heroku_login_page">
+<msg time="2026-03-09T23:45:48.168421" level="TRACE">Arguments: [  ]</msg>
+<kw name="Wait until element is visible with retry" owner="common_web">
+<msg time="2026-03-09T23:45:48.169421" level="TRACE">Arguments: [ ${locator}='xpath=//div[@id="flash" and contains(text(),"Your username is invalid!")]' | ${max_attempt}=3 | ${timeout}='40s' ]</msg>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<msg time="2026-03-09T23:45:48.170925" level="TRACE">Arguments: [ 'SeleniumLibrary.Wait until element is visible' | '${locator}' | '${timeout}' ]</msg>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-03-09T23:45:48.170925" level="TRACE">Arguments: [ 'xpath=//div[@id="flash" and contains(text(),"Your username is invalid!")]' | datetime.timedelta(seconds=40) ]</msg>
+<msg time="2026-03-09T23:45:48.170925" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/elements {'using': 'xpath', 'value': '//div[@id="flash" and contains(text(),"Your username is invalid!")]'}</msg>
+<msg time="2026-03-09T23:45:48.176439" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:48.176439" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:48.176439" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:48.377085" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/elements {'using': 'xpath', 'value': '//div[@id="flash" and contains(text(),"Your username is invalid!")]'}</msg>
+<msg time="2026-03-09T23:45:48.724192" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/elements HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:48.724192" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.7DA61FB77F25CF7B5411E1D70727CC57.d.4CB78B5B9329086A07B501908622F2E6.e.24"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:48.724192" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:48.724192" level="DEBUG">POST http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){/*\n\n Copyright The Closure Library Authors.\n ...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.7DA61FB77F25CF7B5411E1D70727CC57.d.4CB78B5B9329086A07B501908622F2E6.e.24'}]}</msg>
+<msg time="2026-03-09T23:45:48.727193" level="DEBUG">http://localhost:63961 "POST /session/8863a2ad810d48fba07b5a5e439f34de/execute/sync HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:48.727193" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:48.727193" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:48.727193" level="TRACE">Return: None</msg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-09T23:45:48.170925" elapsed="0.556268"/>
+</kw>
+<msg time="2026-03-09T23:45:48.727193" level="TRACE">Return: True</msg>
+<msg time="2026-03-09T23:45:48.727193" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>SeleniumLibrary.Wait until element is visible</arg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-03-09T23:45:48.170925" elapsed="0.556268"/>
+</kw>
+<if>
+<branch type="IF" condition="${status}">
+<return>
+<status status="PASS" start="2026-03-09T23:45:48.727193" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2026-03-09T23:45:48.727193" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-03-09T23:45:48.727193" elapsed="0.000000"/>
+</if>
+<var name="${i}">0</var>
+<status status="PASS" start="2026-03-09T23:45:48.170925" elapsed="0.556268"/>
+</iter>
+<var>${i}</var>
+<value>${max_attempt}</value>
+<status status="PASS" start="2026-03-09T23:45:48.169421" elapsed="0.558771"/>
+</for>
+<kw name="Fail" owner="BuiltIn">
+<arg>Element '${locator}' not visible after ${max_attempt} attempts</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-03-09T23:45:48.728192" elapsed="0.000000"/>
+</kw>
+<msg time="2026-03-09T23:45:48.728192" level="TRACE">Return: None</msg>
+<arg>locator=${heroku_login_locator.lbl_login_username_failed}</arg>
+<doc>Wait until element is visible with retry
+${max_attempt} e.g. by default is 3 rounds
+${timeout} e.g. by default is 40s</doc>
+<status status="PASS" start="2026-03-09T23:45:48.169421" elapsed="0.558771"/>
+</kw>
+<msg time="2026-03-09T23:45:48.728192" level="TRACE">Return: None</msg>
+<doc>Verify login username failed popup is displayed popup label is "Your password is invalid!"</doc>
+<status status="PASS" start="2026-03-09T23:45:48.168421" elapsed="0.559771"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2026-03-09T23:45:48.728192" level="TRACE">Arguments: [  ]</msg>
+<msg time="2026-03-09T23:45:48.728192" level="DEBUG">Closing all browsers.</msg>
+<msg time="2026-03-09T23:45:48.728192" level="DEBUG">DELETE http://localhost:63961/session/8863a2ad810d48fba07b5a5e439f34de {}</msg>
+<msg time="2026-03-09T23:45:48.765981" level="DEBUG">http://localhost:63961 "DELETE /session/8863a2ad810d48fba07b5a5e439f34de HTTP/1.1" 200 0</msg>
+<msg time="2026-03-09T23:45:48.765981" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-03-09T23:45:48.766982" level="DEBUG">Finished Request</msg>
+<msg time="2026-03-09T23:45:50.809904" level="TRACE">Return: None</msg>
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-03-09T23:45:48.728192" elapsed="2.081712"/>
+</kw>
+<doc>To verify that users can login unsuccessfully when they input a username that did not exist.</doc>
+<tag>feature:login</tag>
+<tag>platform:web</tag>
+<tag>test_id:test_heroku_03</tag>
+<status status="PASS" start="2026-03-09T23:45:43.479483" elapsed="7.331434"/>
+</test>
+<status status="PASS" start="2026-03-09T23:45:27.506154" elapsed="23.307175"/>
+</suite>
+<status status="PASS" start="2026-03-09T23:45:27.483134" elapsed="23.335195"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">feature:login</stat>
+<stat pass="3" fail="0" skip="0">platform:web</stat>
+<stat pass="1" fail="0" skip="0">test_id:test_heroku_01</stat>
+<stat pass="1" fail="0" skip="0">test_id:test_heroku_02</stat>
+<stat pass="1" fail="0" skip="0">test_id:test_heroku_03</stat>
+</tag>
+<suite>
+<stat name="Testcases" id="s1" pass="3" fail="0" skip="0">Testcases</stat>
+<stat name="Assignment2" id="s1-s1" pass="3" fail="0" skip="0">Testcases.Assignment2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

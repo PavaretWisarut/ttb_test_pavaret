@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.11.9 on win32)" generated="2026-03-10T00:48:23.066637" rpa="false" schemaversion="5">
+<suite id="s1" name="Testcases" source="C:\Users\USER\OneDrive\เอกสาร\project_git\ttb_test_pavaret\assignment2-5\testcases">
+<suite id="s1-s1" name="Assignment3" source="C:\Users\USER\OneDrive\เอกสาร\project_git\ttb_test_pavaret\assignment2-5\testcases\assignment3.robot">
+<test id="s1-s1-t1" name="API_test_01 : Get user profile success" line="7">
+<kw name="Get user profile" owner="user_profile_api">
+<msg time="2026-03-10T00:48:23.447443" level="TRACE">Arguments: [ ${user_id}=12 ]</msg>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-03-10T00:48:23.447443" level="TRACE">Arguments: [ 'x-api-key=${api.x_api_key}' ]</msg>
+<msg time="2026-03-10T00:48:23.448441" level="TRACE">Return: {'x-api-key': 'reqres_29a3e86db42e4673a92a474831f3f828'}</msg>
+<msg time="2026-03-10T00:48:23.448441" level="INFO">${headers} = {'x-api-key': 'reqres_29a3e86db42e4673a92a474831f3f828'}</msg>
+<var>${headers}</var>
+<arg>x-api-key=${api.x_api_key}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-03-10T00:48:23.447443" elapsed="0.000998"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-03-10T00:48:23.448441" level="TRACE">Arguments: [ alias='Get session' | url='https://reqres.in/' ]</msg>
+<msg time="2026-03-10T00:48:23.448441" level="INFO">Creating Session using : alias=Get session, url=https://reqres.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2026-03-10T00:48:23.448441" level="DEBUG">Creating session: Get session</msg>
+<msg time="2026-03-10T00:48:23.448441" level="TRACE">Return: &lt;requests.sessions.Session object at 0x000002A56F511750&gt;</msg>
+<arg>alias=Get session</arg>
+<arg>url=${api.reqres_url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-03-10T00:48:23.448441" elapsed="0.000000"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-03-10T00:48:23.449441" level="TRACE">Arguments: [ alias='Get session' | url='api/users/12' | headers={'x-api-key': 'reqres_29a3e86db42e4673a92a474831f3f828'} | expected_status='any' ]</msg>
+<msg time="2026-03-10T00:48:23.451441" level="DEBUG">Starting new HTTPS connection (1): reqres.in:443</msg>
+<msg time="2026-03-10T00:48:24.012442" level="DEBUG">https://reqres.in:443 "GET /api/users/12 HTTP/1.1" 200 None</msg>
+<msg time="2026-03-10T00:48:24.012442" level="INFO">GET Request : url=https://reqres.in/api/users/12 
+ path_url=/api/users/12 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'x-api-key': 'reqres_29a3e86db42e4673a92a474831f3f828'} 
+ body=None 
+ </msg>
+<msg time="2026-03-10T00:48:24.012442" level="INFO">GET Response : url=https://reqres.in/api/users/12 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 09 Mar 2026 17:48:32 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization, x-api-key', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Access-Control-Allow-Origin': 'http://localhost:5173', 'Cache-Control': 'no-store', 'Etag': 'W/"2d3-kgC69Mq8eY0XkYDwBpDQpggrAVs"', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Ratelimit-Limit': '20', 'Ratelimit-Policy': '20;w=60', 'Ratelimit-Remaining': '19', 'Ratelimit-Reset': '60', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=%2Fwfhgy6P00btuhZgW4c15z0yvmkTpeDVzUkct7M25H0%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1773078512"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=%2Fwfhgy6P00btuhZgW4c15z0yvmkTpeDVzUkct7M25H0%3D&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;ts=1773078512"', 'Server': 'cloudflare', 'Vary': 'Origin', 'Via': '1.1 heroku-router', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY', 'X-Powered-By': 'ReqRes.in - Deploy backends in 30 seconds', 'X-Ratelimit-Limit': '250', 'X-Ratelimit-Remaining': '218', 'X-Ratelimit-Reset': '1773100800', 'X-Reqres-Docs': 'https://reqres.in', 'X-Reqres-Message': 'This API is powered by ReqRes. Deploy your own backend in 30 seconds!', 'X-Reqres-Templates': 'https://app.reqres.in/templates', 'X-Reqres-Tip': 'Need more than /api/users? Build custom collections - app.reqres.in/dashboard', 'X-Reqres-Trial': 'true', 'X-Reqres-Trial-Days-Remaining': '14', 'X-Reqres-Trial-Expires': '2026-03-23T11:49:14.183Z', 'X-Reqres-Upgrade': 'https://app.reqres.in/upgrade', 'X-Request-Id': 'e9b318f4-617a-ed59-f09a-6f7830ac9501', 'X-Robots-Tag': 'noindex, nofollow', 'X-Xss-Protection': '1; mode=block', 'cf-cache-status': 'BYPASS', 'Content-Encoding': 'gzip', 'CF-RAY': '9d9be939da85ee21-BKK'} 
+ body={"data":{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"},"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."},"_meta":{"powered_by":"ReqRes","docs_url":"https://app.reqres.in/documentation","upgrade_url":"https://app.reqres.in/upgrade","example_url":"https://app.reqres.in/examples/notes-app","variant":"v1_b","message":"Need more than fake data? Projects give you real CRUD + auth in minutes.","cta":{"label":"Get started","url":"https://app.reqres.in/upgrade"},"context":"legacy_success"}} 
+ </msg>
+<msg time="2026-03-10T00:48:24.012442" level="INFO">C:\Users\USER\OneDrive\เอกสาร\project_git\ttb_test_pavaret\assignment2-5\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2026-03-10T00:48:24.013442" level="TRACE">Return: &lt;Response [200]&gt;</msg>
+<msg time="2026-03-10T00:48:24.013442" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>alias=Get session</arg>
+<arg>url=${api.reqres_user_endpoint}${user_id}</arg>
+<arg>headers=${headers}</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-03-10T00:48:23.449441" elapsed="0.564001"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-03-10T00:48:24.013442" level="TRACE">Arguments: [ 200 ]</msg>
+<msg time="2026-03-10T00:48:24.014445" level="TRACE">Return: 200</msg>
+<msg time="2026-03-10T00:48:24.014445" level="INFO">${status} = 200</msg>
+<var>${status}</var>
+<arg>${response.status_code}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-03-10T00:48:24.013442" elapsed="0.001003"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-03-10T00:48:24.014445" level="TRACE">Arguments: [ {'data': {'id': 12,
+          'email': 'rachel.howell@reqres.in',
+          'first_name': 'Rachel',
+          'last_name': 'Howell',
+          'avatar': 'https://reqres.in/img/faces/12-image.jpg'},
+ 'support': {'url': 'https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral',
+             'text': 'Tired of writing endless social media content? Let Content Caddy generate it for you.'},
+ '_meta': {'powered_by': 'ReqRes',
+           'docs_url': 'https://app.reqres.in/documentation',
+           'upgrade_url': 'https://app.reqres.in/upgrade',
+           'example_url': 'https://app.reqres.in/examples/notes-app',
+           'variant': 'v1_b',
+           'message': 'Need more than fake data? Projects give you real CRUD + auth in minutes.',
+           'cta': {'label': 'Get started',
+                   'url': 'https://app.reqres.in/upgrade'},
+           'context': 'legacy_success'}} ]</msg>
+<msg time="2026-03-10T00:48:24.014445" level="TRACE">Return: {'data': {'id': 12,
+          'email': 'rachel.howell@reqres.in',
+          'first_name': 'Rachel',
+          'last_name': 'Howell',
+          'avatar': 'https://reqres.in/img/faces/12-image.jpg'},
+ 'support': {'url': 'https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral',
+             'text': 'Tired of writing endless social media content? Let Content Caddy generate it for you.'},
+ '_meta': {'powered_by': 'ReqRes',
+           'docs_url': 'https://app.reqres.in/documentation',
+           'upgrade_url': 'https://app.reqres.in/upgrade',
+           'example_url': 'https://app.reqres.in/examples/notes-app',
+           'variant': 'v1_b',
+           'message': 'Need more than fake data? Projects give you real CRUD + auth in minutes.',
+           'cta': {'label': 'Get started',
+                   'url': 'https://app.reqres.in/upgrade'},
+           'context': 'legacy_success'}}</msg>
+<msg time="2026-03-10T00:48:24.014445" level="INFO">${response_json} = {'data': {'id': 12, 'email': 'rachel.howell@reqres.in', 'first_name': 'Rachel', 'last_name': 'Howell', 'avatar': 'https://reqres.in/img/faces/12-image.jpg'}, 'support': {'url': 'https://contentcaddy.i...</msg>
+<var>${response_json}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-03-10T00:48:24.014445" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == 200">
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2026-03-10T00:48:24.015440" level="TRACE">Arguments: [ {'data': {'id': 12,
+          'email': 'rachel.howell@reqres.in',
+          'first_name': 'Rachel',
+          'last_name': 'Howell',
+          'avatar': 'https://reqres.in/img/faces/12-image.jpg'},
+ 'support': {'url': 'https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral',
+             'text': 'Tired of writing endless social media content? Let Content Caddy generate it for you.'},
+ '_meta': {'powered_by': 'ReqRes',
+           'docs_url': 'https://app.reqres.in/documentation',
+           'upgrade_url': 'https://app.reqres.in/upgrade',
+           'example_url': 'https://app.reqres.in/examples/notes-app',
+           'variant': 'v1_b',
+           'message': 'Need more than fake data? Projects give you real CRUD + auth in minutes.',
+           'cta': {'label': 'Get started',
+                   'url': 'https://app.reqres.in/upgrade'},
+           'context': 'legacy_success'}} | '$..data.id' ]</msg>
+<msg time="2026-03-10T00:48:24.028588" level="TRACE">Return: [12]</msg>
+<msg time="2026-03-10T00:48:24.028588" level="INFO">${data_id} = [12]</msg>
+<var>${data_id}</var>
+<arg>${response_json}</arg>
+<arg>$..data.id</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2026-03-10T00:48:24.015440" elapsed="0.013148"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2026-03-10T00:48:24.028588" level="TRACE">Arguments: [ {'data': {'id': 12,
+          'email': 'rachel.howell@reqres.in',
+          'first_name': 'Rachel',
+          'last_name': 'Howell',
+          'avatar': 'https://reqres.in/img/faces/12-image.jpg'},
+ 'support': {'url': 'https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral',
+             'text': 'Tired of writing endless social media content? Let Content Caddy generate it for you.'},
+ '_meta': {'powered_by': 'ReqRes',
+           'docs_url': 'https://app.reqres.in/documentation',
+           'upgrade_url': 'https://app.reqres.in/upgrade',
+           'example_url': 'https://app.reqres.in/examples/notes-app',
+           'variant': 'v1_b',
+           'message': 'Need more than fake data? Projects give you real CRUD + auth in minutes.',
+           'cta': {'label': 'Get started',
+                   'url': 'https://app.reqres.in/upgrade'},
+           'context': 'legacy_success'}} | '$..data.email' ]</msg>
+<msg time="2026-03-10T00:48:24.039824" level="TRACE">Return: ['rachel.howell@reqres.in']</msg>
+<msg time="2026-03-10T00:48:24.039824" level="INFO">${data_email} = ['rachel.howell@reqres.in']</msg>
+<var>${data_email}</var>
+<arg>${response_json}</arg>
+<arg>$..data.email</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2026-03-10T00:48:24.028588" elapsed="0.011236"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2026-03-10T00:48:24.039824" level="TRACE">Arguments: [ {'data': {'id': 12,
+          'email': 'rachel.howell@reqres.in',
+          'first_name': 'Rachel',
+          'last_name': 'Howell',
+          'avatar': 'https://reqres.in/img/faces/12-image.jpg'},
+ 'support': {'url': 'https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral',
+             'text': 'Tired of writing endless social media content? Let Content Caddy generate it for you.'},
+ '_meta': {'powered_by': 'ReqRes',
+           'docs_url': 'https://app.reqres.in/documentation',
+           'upgrade_url': 'https://app.reqres.in/upgrade',
+           'example_url': 'https://app.reqres.in/examples/notes-app',
+           'variant': 'v1_b',
+           'message': 'Need more than fake data? Projects give you real CRUD + auth in minutes.',
+           'cta': {'label': 'Get started',
+                   'url': 'https://app.reqres.in/upgrade'},
+           'context': 'legacy_success'}} | '$..data.first_name' ]</msg>
+<msg time="2026-03-10T00:48:24.050459" level="TRACE">Return: ['Rachel']</msg>
+<msg time="2026-03-10T00:48:24.050459" level="INFO">${data_first_name} = ['Rachel']</msg>
+<var>${data_first_name}</var>
+<arg>${response_json}</arg>
+<arg>$..data.first_name</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2026-03-10T00:48:24.039824" elapsed="0.010635"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2026-03-10T00:48:24.050459" level="TRACE">Arguments: [ {'data': {'id': 12,
+          'email': 'rachel.howell@reqres.in',
+          'first_name': 'Rachel',
+          'last_name': 'Howell',
+          'avatar': 'https://reqres.in/img/faces/12-image.jpg'},
+ 'support': {'url': 'https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral',
+             'text': 'Tired of writing endless social media content? Let Content Caddy generate it for you.'},
+ '_meta': {'powered_by': 'ReqRes',
+           'docs_url': 'https://app.reqres.in/documentation',
+           'upgrade_url': 'https://app.reqres.in/upgrade',
+           'example_url': 'https://app.reqres.in/examples/notes-app',
+           'variant': 'v1_b',
+           'message': 'Need more than fake data? Projects give you real CRUD + auth in minutes.',
+           'cta': {'label': 'Get started',
+                   'url': 'https://app.reqres.in/upgrade'},
+           'context': 'legacy_success'}} | '$..data.last_name' ]</msg>
+<msg time="2026-03-10T00:48:24.061589" level="TRACE">Return: ['Howell']</msg>
+<msg time="2026-03-10T00:48:24.061589" level="INFO">${data_last_name} = ['Howell']</msg>
+<var>${data_last_name}</var>
+<arg>${response_json}</arg>
+<arg>$..data.last_name</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2026-03-10T00:48:24.050459" elapsed="0.011130"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2026-03-10T00:48:24.062093" level="TRACE">Arguments: [ {'data': {'id': 12,
+          'email': 'rachel.howell@reqres.in',
+          'first_name': 'Rachel',
+          'last_name': 'Howell',
+          'avatar': 'https://reqres.in/img/faces/12-image.jpg'},
+ 'support': {'url': 'https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral',
+             'text': 'Tired of writing endless social media content? Let Content Caddy generate it for you.'},
+ '_meta': {'powered_by': 'ReqRes',
+           'docs_url': 'https://app.reqres.in/documentation',
+           'upgrade_url': 'https://app.reqres.in/upgrade',
+           'example_url': 'https://app.reqres.in/examples/notes-app',
+           'variant': 'v1_b',
+           'message': 'Need more than fake data? Projects give you real CRUD + auth in minutes.',
+           'cta': {'label': 'Get started',
+                   'url': 'https://app.reqres.in/upgrade'},
+           'context': 'legacy_success'}} | '$..data.avatar' ]</msg>
+<msg time="2026-03-10T00:48:24.073118" level="TRACE">Return: ['https://reqres.in/img/faces/12-image.jpg']</msg>
+<msg time="2026-03-10T00:48:24.073118" level="INFO">${data_avatar} = ['https://reqres.in/img/faces/12-image.jpg']</msg>
+<var>${data_avatar}</var>
+<arg>${response_json}</arg>
+<arg>$..data.avatar</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2026-03-10T00:48:24.062093" elapsed="0.011025"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-03-10T00:48:24.073118" level="TRACE">Arguments: [ 'id=${data_id}[0]' | 'email=${data_email}[0]' | 'first_name=${data_first_name}[0]' | 'last_name=${data_last_name}[0]' | 'avatar=${data_avatar}[0]' ]</msg>
+<msg time="2026-03-10T00:48:24.073118" level="TRACE">Return: {'id': 12,
+ 'email': 'rachel.howell@reqres.in',
+ 'first_name': 'Rachel',
+ 'last_name': 'Howell',
+ 'avatar': 'https://reqres.in/img/faces/12-image.jpg'}</msg>
+<msg time="2026-03-10T00:48:24.074123" level="INFO">${result} = {'id': 12, 'email': 'rachel.howell@reqres.in', 'first_name': 'Rachel', 'last_name': 'Howell', 'avatar': 'https://reqres.in/img/faces/12-image.jpg'}</msg>
+<var>${result}</var>
+<arg>id=${data_id}[0]</arg>
+<arg>email=${data_email}[0]</arg>
+<arg>first_name=${data_first_name}[0]</arg>
+<arg>last_name=${data_last_name}[0]</arg>
+<arg>avatar=${data_avatar}[0]</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-03-10T00:48:24.073118" elapsed="0.001005"/>
+</kw>
+<return>
+<value>${status}</value>
+<value>${result}</value>
+<status status="PASS" start="2026-03-10T00:48:24.074123" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2026-03-10T00:48:24.015440" elapsed="0.058683"/>
+</branch>
+<branch type="ELSE">
+<return>
+<value>${status}</value>
+<value>${response.json()}</value>
+<status status="NOT RUN" start="2026-03-10T00:48:24.074123" elapsed="0.000000"/>
+</return>
+<status status="NOT RUN" start="2026-03-10T00:48:24.074123" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-03-10T00:48:24.015440" elapsed="0.058683"/>
+</if>
+<msg time="2026-03-10T00:48:24.074123" level="TRACE">Return: [200,
+ {'id': 12,
+  'email': 'rachel.howell@reqres.in',
+  'first_name': 'Rachel',
+  'last_name': 'Howell',
+  'avatar': 'https://reqres.in/img/faces/12-image.jpg'}]</msg>
+<msg time="2026-03-10T00:48:24.074123" level="INFO">${status} = 200</msg>
+<msg time="2026-03-10T00:48:24.074123" level="INFO">${response_json} = {'id': 12, 'email': 'rachel.howell@reqres.in', 'first_name': 'Rachel', 'last_name': 'Howell', 'avatar': 'https://reqres.in/img/faces/12-image.jpg'}</msg>
+<var>${status}</var>
+<var>${response_json}</var>
+<arg>user_id=${assignment3.api_test_01.user_id}</arg>
+<doc>This keyword using for get user profile with valid user id
+${user_id} e.g. 12
+for return value it will return only id , email , firstname , last_name and avatar only</doc>
+<status status="PASS" start="2026-03-10T00:48:23.447443" elapsed="0.626680"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-03-10T00:48:24.075129" level="TRACE">Arguments: [ first=200 | second='200' ]</msg>
+<msg time="2026-03-10T00:48:24.075129" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2026-03-10T00:48:24.075129" level="TRACE">Return: None</msg>
+<arg>first=${status}</arg>
+<arg>second=200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-03-10T00:48:24.075129" elapsed="0.000000"/>
+</kw>
+<kw name="Verify user profile response is eqaul as expected" owner="user_profile_api">
+<msg time="2026-03-10T00:48:24.076129" level="TRACE">Arguments: [ ${response_json}={'id': 12,
+ 'email': 'rachel.howell@reqres.in',
+ 'first_name': 'Rachel',
+ 'last_name': 'Howell',
+ 'avatar': 'https://reqres.in/img/faces/12-image.jpg'} | ${expected_response}={'id': 12,
+ 'email': 'rachel.howell@reqres.in',
+ 'first_name': 'Rachel',
+ 'last_name': 'Howell',
+ 'avatar': 'https://reqres.in/img/faces/12-image.jpg'} ]</msg>
+<for flavor="IN">
+<iter>
+<kw name="Should Be Equal" owner="BuiltIn">
+<msg time="2026-03-10T00:48:24.077127" level="TRACE">Arguments: [ 12 | 12 ]</msg>
+<msg time="2026-03-10T00:48:24.077127" level="DEBUG">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'int'&gt;</msg>
+<msg time="2026-03-10T00:48:24.077127" level="TRACE">Return: None</msg>
+<arg>${response_json}[${key}]</arg>
+<arg>${expected_response}[${key}]</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-03-10T00:48:24.076129" elapsed="0.000998"/>
+</kw>
+<var name="${key}">id</var>
+<status status="PASS" start="2026-03-10T00:48:24.076129" elapsed="0.000998"/>
+</iter>
+<iter>
+<kw name="Should Be Equal" owner="BuiltIn">
+<msg time="2026-03-10T00:48:24.077127" level="TRACE">Arguments: [ 'rachel.howell@reqres.in' | 'rachel.howell@reqres.in' ]</msg>
+<msg time="2026-03-10T00:48:24.077127" level="DEBUG">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2026-03-10T00:48:24.077127" level="TRACE">Return: None</msg>
+<arg>${response_json}[${key}]</arg>
+<arg>${expected_response}[${key}]</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-03-10T00:48:24.077127" elapsed="0.000000"/>
+</kw>
+<var name="${key}">email</var>
+<status status="PASS" start="2026-03-10T00:48:24.077127" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Should Be Equal" owner="BuiltIn">
+<msg time="2026-03-10T00:48:24.078126" level="TRACE">Arguments: [ 'Rachel' | 'Rachel' ]</msg>
+<msg time="2026-03-10T00:48:24.078126" level="DEBUG">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2026-03-10T00:48:24.078126" level="TRACE">Return: None</msg>
+<arg>${response_json}[${key}]</arg>
+<arg>${expected_response}[${key}]</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-03-10T00:48:24.077127" elapsed="0.000999"/>
+</kw>
+<var name="${key}">first_name</var>
+<status status="PASS" start="2026-03-10T00:48:24.077127" elapsed="0.000999"/>
+</iter>
+<iter>
+<kw name="Should Be Equal" owner="BuiltIn">
+<msg time="2026-03-10T00:48:24.078126" level="TRACE">Arguments: [ 'Howell' | 'Howell' ]</msg>
+<msg time="2026-03-10T00:48:24.078126" level="DEBUG">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2026-03-10T00:48:24.078126" level="TRACE">Return: None</msg>
+<arg>${response_json}[${key}]</arg>
+<arg>${expected_response}[${key}]</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-03-10T00:48:24.078126" elapsed="0.000000"/>
+</kw>
+<var name="${key}">last_name</var>
+<status status="PASS" start="2026-03-10T00:48:24.078126" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Should Be Equal" owner="BuiltIn">
+<msg time="2026-03-10T00:48:24.078126" level="TRACE">Arguments: [ 'https://reqres.in/img/faces/12-image.jpg' | 'https://reqres.in/img/faces/12-image.jpg' ]</msg>
+<msg time="2026-03-10T00:48:24.079126" level="DEBUG">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2026-03-10T00:48:24.079126" level="TRACE">Return: None</msg>
+<arg>${response_json}[${key}]</arg>
+<arg>${expected_response}[${key}]</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-03-10T00:48:24.078126" elapsed="0.001000"/>
+</kw>
+<var name="${key}">avatar</var>
+<status status="PASS" start="2026-03-10T00:48:24.078126" elapsed="0.001000"/>
+</iter>
+<var>${key}</var>
+<value>@{expected_response.keys()}</value>
+<status status="PASS" start="2026-03-10T00:48:24.076129" elapsed="0.002997"/>
+</for>
+<msg time="2026-03-10T00:48:24.079126" level="TRACE">Return: None</msg>
+<arg>response_json=${response_json}</arg>
+<arg>expected_response=${assignment3.api_test_01.expected_response}</arg>
+<doc>Verify user profile response is eqaul as expected
+{'id': 12, 'email': 'rachel.howell@reqres.in', 'first_name': 'Rachel', 'last_name': 'Howell', 'avatar': 'https://reqres.in/img/faces/12-image.jpg'} can get the data when using this keyword Get user profile success
+${expected_response} e.g. {'id': 12, 'email': 'rachel.howell@reqres.in', 'first_name': 'Rachel', 'last_name': 'Howell', 'avatar': 'https://reqres.in/img/faces/12-image.jpg'}
+it from test data can see in the "assignment3.yaml" for example</doc>
+<status status="PASS" start="2026-03-10T00:48:24.076129" elapsed="0.002997"/>
+</kw>
+<doc>To verify get user profile api will return correct data when trying to get profile of existing user</doc>
+<tag>feature:user_profile</tag>
+<tag>platform:api</tag>
+<tag>test_id:API_test_01</tag>
+<status status="PASS" start="2026-03-10T00:48:23.446441" elapsed="0.632685"/>
+</test>
+<test id="s1-s1-t2" name="API_test_02 : Get user profile but user not found" line="19">
+<kw name="Get user profile" owner="user_profile_api">
+<msg time="2026-03-10T00:48:24.080128" level="TRACE">Arguments: [ ${user_id}=1234 ]</msg>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-03-10T00:48:24.080128" level="TRACE">Arguments: [ 'x-api-key=${api.x_api_key}' ]</msg>
+<msg time="2026-03-10T00:48:24.081632" level="TRACE">Return: {'x-api-key': 'reqres_29a3e86db42e4673a92a474831f3f828'}</msg>
+<msg time="2026-03-10T00:48:24.081632" level="INFO">${headers} = {'x-api-key': 'reqres_29a3e86db42e4673a92a474831f3f828'}</msg>
+<var>${headers}</var>
+<arg>x-api-key=${api.x_api_key}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-03-10T00:48:24.080128" elapsed="0.001504"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-03-10T00:48:24.081632" level="TRACE">Arguments: [ alias='Get session' | url='https://reqres.in/' ]</msg>
+<msg time="2026-03-10T00:48:24.081632" level="INFO">Creating Session using : alias=Get session, url=https://reqres.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2026-03-10T00:48:24.081632" level="DEBUG">Creating session: Get session</msg>
+<msg time="2026-03-10T00:48:24.081632" level="TRACE">Return: &lt;requests.sessions.Session object at 0x000002A56F631CD0&gt;</msg>
+<arg>alias=Get session</arg>
+<arg>url=${api.reqres_url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-03-10T00:48:24.081632" elapsed="0.000000"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-03-10T00:48:24.082637" level="TRACE">Arguments: [ alias='Get session' | url='api/users/1234' | headers={'x-api-key': 'reqres_29a3e86db42e4673a92a474831f3f828'} | expected_status='any' ]</msg>
+<msg time="2026-03-10T00:48:24.082637" level="DEBUG">Starting new HTTPS connection (1): reqres.in:443</msg>
+<msg time="2026-03-10T00:48:24.403785" level="DEBUG">https://reqres.in:443 "GET /api/users/1234 HTTP/1.1" 404 2</msg>
+<msg time="2026-03-10T00:48:24.404786" level="INFO">GET Request : url=https://reqres.in/api/users/1234 
+ path_url=/api/users/1234 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'x-api-key': 'reqres_29a3e86db42e4673a92a474831f3f828'} 
+ body=None 
+ </msg>
+<msg time="2026-03-10T00:48:24.404786" level="INFO">GET Response : url=https://reqres.in/api/users/1234 
+ status=404, reason=Not Found 
+ headers={'Date': 'Mon, 09 Mar 2026 17:48:32 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '2', 'Connection': 'keep-alive', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization, x-api-key', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Access-Control-Allow-Origin': 'http://localhost:5173', 'Cache-Control': 'no-store', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Ratelimit-Limit': '20', 'Ratelimit-Policy': '20;w=60', 'Ratelimit-Remaining': '17', 'Ratelimit-Reset': '10', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=%2Fwfhgy6P00btuhZgW4c15z0yvmkTpeDVzUkct7M25H0%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1773078512"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=%2Fwfhgy6P00btuhZgW4c15z0yvmkTpeDVzUkct7M25H0%3D&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;ts=1773078512"', 'Server': 'cloudflare', 'Vary': 'Origin', 'Via': '1.1 heroku-router', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY', 'X-Powered-By': 'ReqRes.in - Deploy backends in 30 seconds', 'X-Ratelimit-Limit': '250', 'X-Ratelimit-Remaining': '217', 'X-Ratelimit-Reset': '1773100800', 'X-Reqres-Docs': 'https://reqres.in', 'X-Reqres-Message': 'This API is powered by ReqRes. Deploy your own backend in 30 seconds!', 'X-Reqres-Templates': 'https://app.reqres.in/templates', 'X-Reqres-Tip': 'Test against your own data, not fixtures - app.reqres.in/dashboard', 'X-Reqres-Trial': 'true', 'X-Reqres-Trial-Days-Remaining': '14', 'X-Reqres-Trial-Expires': '2026-03-23T11:49:14.183Z', 'X-Reqres-Upgrade': 'https://app.reqres.in/upgrade', 'X-Request-Id': '4c7b3a6e-a906-349f-087b-eb490feb20f8', 'X-Robots-Tag': 'noindex, nofollow', 'X-Xss-Protection': '1; mode=block', 'cf-cache-status': 'BYPASS', 'CF-RAY': '9d9be93dca46ee66-BKK'} 
+ body={} 
+ </msg>
+<msg time="2026-03-10T00:48:24.404786" level="INFO">C:\Users\USER\OneDrive\เอกสาร\project_git\ttb_test_pavaret\assignment2-5\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2026-03-10T00:48:24.404786" level="TRACE">Return: &lt;Response [404]&gt;</msg>
+<msg time="2026-03-10T00:48:24.404786" level="INFO">${response} = &lt;Response [404]&gt;</msg>
+<var>${response}</var>
+<arg>alias=Get session</arg>
+<arg>url=${api.reqres_user_endpoint}${user_id}</arg>
+<arg>headers=${headers}</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-03-10T00:48:24.081632" elapsed="0.323154"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-03-10T00:48:24.405789" level="TRACE">Arguments: [ 404 ]</msg>
+<msg time="2026-03-10T00:48:24.405789" level="TRACE">Return: 404</msg>
+<msg time="2026-03-10T00:48:24.405789" level="INFO">${status} = 404</msg>
+<var>${status}</var>
+<arg>${response.status_code}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-03-10T00:48:24.404786" elapsed="0.001003"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-03-10T00:48:24.405789" level="TRACE">Arguments: [ {} ]</msg>
+<msg time="2026-03-10T00:48:24.405789" level="TRACE">Return: {}</msg>
+<msg time="2026-03-10T00:48:24.405789" level="INFO">${response_json} = {}</msg>
+<var>${response_json}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-03-10T00:48:24.405789" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${status} == 200">
+<kw name="Get Value From Json" owner="JSONLibrary">
+<var>${data_id}</var>
+<arg>${response_json}</arg>
+<arg>$..data.id</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="NOT RUN" start="2026-03-10T00:48:24.406789" elapsed="0.000000"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<var>${data_email}</var>
+<arg>${response_json}</arg>
+<arg>$..data.email</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="NOT RUN" start="2026-03-10T00:48:24.406789" elapsed="0.000000"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<var>${data_first_name}</var>
+<arg>${response_json}</arg>
+<arg>$..data.first_name</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="NOT RUN" start="2026-03-10T00:48:24.406789" elapsed="0.000000"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<var>${data_last_name}</var>
+<arg>${response_json}</arg>
+<arg>$..data.last_name</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="NOT RUN" start="2026-03-10T00:48:24.406789" elapsed="0.000000"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<var>${data_avatar}</var>
+<arg>${response_json}</arg>
+<arg>$..data.avatar</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="NOT RUN" start="2026-03-10T00:48:24.406789" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<var>${result}</var>
+<arg>id=${data_id}[0]</arg>
+<arg>email=${data_email}[0]</arg>
+<arg>first_name=${data_first_name}[0]</arg>
+<arg>last_name=${data_last_name}[0]</arg>
+<arg>avatar=${data_avatar}[0]</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="NOT RUN" start="2026-03-10T00:48:24.406789" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${status}</value>
+<value>${result}</value>
+<status status="NOT RUN" start="2026-03-10T00:48:24.406789" elapsed="0.000000"/>
+</return>
+<status status="NOT RUN" start="2026-03-10T00:48:24.405789" elapsed="0.001000"/>
+</branch>
+<branch type="ELSE">
+<return>
+<value>${status}</value>
+<value>${response.json()}</value>
+<status status="PASS" start="2026-03-10T00:48:24.406789" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2026-03-10T00:48:24.406789" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-03-10T00:48:24.405789" elapsed="0.001000"/>
+</if>
+<msg time="2026-03-10T00:48:24.407787" level="TRACE">Return: [404, {}]</msg>
+<msg time="2026-03-10T00:48:24.407787" level="INFO">${status} = 404</msg>
+<msg time="2026-03-10T00:48:24.407787" level="INFO">${response_json} = {}</msg>
+<var>${status}</var>
+<var>${response_json}</var>
+<arg>user_id=${assignment3.api_test_02.user_id}</arg>
+<doc>This keyword using for get user profile with valid user id
+${user_id} e.g. 12
+for return value it will return only id , email , firstname , last_name and avatar only</doc>
+<status status="PASS" start="2026-03-10T00:48:24.080128" elapsed="0.327659"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-03-10T00:48:24.407787" level="TRACE">Arguments: [ first=404 | second='404' ]</msg>
+<msg time="2026-03-10T00:48:24.407787" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2026-03-10T00:48:24.407787" level="TRACE">Return: None</msg>
+<arg>first=${status}</arg>
+<arg>second=404</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-03-10T00:48:24.407787" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Empty" owner="BuiltIn">
+<msg time="2026-03-10T00:48:24.408954" level="TRACE">Arguments: [ {} ]</msg>
+<msg time="2026-03-10T00:48:24.408954" level="INFO">Length is 0.</msg>
+<msg time="2026-03-10T00:48:24.408954" level="TRACE">Return: None</msg>
+<arg>${response_json}</arg>
+<doc>Verifies that the given item is empty.</doc>
+<status status="PASS" start="2026-03-10T00:48:24.408954" elapsed="0.000000"/>
+</kw>
+<doc>To verify get user profile api will return 404 not found when trying to get exist profile of not existing user</doc>
+<tag>feature:user_profile</tag>
+<tag>platform:api</tag>
+<tag>test_id:API_test_02</tag>
+<status status="PASS" start="2026-03-10T00:48:24.079126" elapsed="0.329828"/>
+</test>
+<status status="PASS" start="2026-03-10T00:48:23.096991" elapsed="1.312962"/>
+</suite>
+<status status="PASS" start="2026-03-10T00:48:23.067639" elapsed="1.342314"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">feature:user_profile</stat>
+<stat pass="2" fail="0" skip="0">platform:api</stat>
+<stat pass="1" fail="0" skip="0">test_id:API_test_01</stat>
+<stat pass="1" fail="0" skip="0">test_id:API_test_02</stat>
+</tag>
+<suite>
+<stat name="Testcases" id="s1" pass="2" fail="0" skip="0">Testcases</stat>
+<stat name="Assignment3" id="s1-s1" pass="2" fail="0" skip="0">Testcases.Assignment3</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-03-10T00:48:23.441438" level="ERROR">Error in file 'C:\Users\USER\OneDrive\เอกสาร\project_git\ttb_test_pavaret\assignment2-5\resources\import.robot' on line 22: Resource file 'C:\Users\USER\OneDrive\เอกสาร\project_git\ttb_test_pavaret\assignment2-5\keywords\ui\features\api\heroku_login_feature.robot' does not exist.</msg>
+<msg time="2026-03-10T00:48:23.442441" level="ERROR">Error in file 'C:\Users\USER\OneDrive\เอกสาร\project_git\ttb_test_pavaret\assignment2-5\resources\import.robot' on line 25: Resource file 'C:\Users\USER\OneDrive\เอกสาร\project_git\ttb_test_pavaret\assignment2-5\keywords\ui\pages\api\heroku_login_page.robot' does not exist.</msg>
+<msg time="2026-03-10T00:48:23.442441" level="ERROR">Error in file 'C:\Users\USER\OneDrive\เอกสาร\project_git\ttb_test_pavaret\assignment2-5\resources\import.robot' on line 28: Resource file 'C:\Users\USER\OneDrive\เอกสาร\project_git\ttb_test_pavaret\assignment2-5\resources\locators\ui\api\heroku_login_locator.robot' does not exist.</msg>
+<msg time="2026-03-10T00:48:23.444441" level="WARN">Error in file 'C:\Users\USER\OneDrive\เอกสาร\project_git\ttb_test_pavaret\assignment2-5\keywords\api\user_profile_api.robot' on line 57: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

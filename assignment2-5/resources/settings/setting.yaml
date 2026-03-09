@@ -1,1 +1,10 @@
-HEROKU_URL: http://the-internet.herokuapp.com/login
+heroku_url: http://the-internet.herokuapp.com/login
+
+global:
+  wait_timeout: 40s
+  default_max_attempt: 3
+
+api:
+  x_api_key: reqres_29a3e86db42e4673a92a474831f3f828
+  reqres_url: https://reqres.in/
+  reqres_user_endpoint: api/users/

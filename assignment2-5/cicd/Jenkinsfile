@@ -1,0 +1,37 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Checkout Code From Git') {
+            steps {
+                git url: 'https://github.com/PavaretWisarut/ttb_test_pavaret.git', branch: 'main'
+            }
+        }
+
+        stage('Run Test Automate') {
+            steps {
+                bat '''
+                python -m venv .venv
+                .venv\\Scripts\\activate
+                pip install -r requirements.txt
+                robot -d results tests
+                '''
+            }
+        }
+
+        stage('Send Result To Jenkins') {
+            steps {
+                archiveArtifacts artifacts: 'results/*', fingerprint: true
+                publishHTML([
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'results',
+                    reportFiles: 'report.html',
+                    reportName: 'Robot Framework Report'
+                ])
+            }
+        }
+    }
+}

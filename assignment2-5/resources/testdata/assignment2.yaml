@@ -1,3 +1,10 @@
 assignment2:
-  username: tomsmith
-  password: SuperSecretPassword!
+  test_heroku_01:
+    username: tomsmith
+    password: SuperSecretPassword!
+  test_heroku_02:
+    username: tomsmith
+    password: Password!
+  test_heroku_03:
+    username: tomholland
+    password: Password!
