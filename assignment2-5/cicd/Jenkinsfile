@@ -12,6 +12,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 sh '''
+                    cd assignment2-5
                     pip install -r requirements.txt
                 '''
             }
@@ -20,14 +21,15 @@ pipeline {
         stage('Run Test Automate') {
             steps {
                 sh '''
-                    python -m robot.run -L TRACE -d result -v LANG:th -v PLATFORM:api  -i feature:user_profile  testcases/
+                    cd assignment2-5
+                    python -m robot.run -L TRACE -d result -v LANG:th -v PLATFORM:api -i feature:user_profile testcases/
                 '''
             }
         }
 
         stage('Send Result To Jenkins') {
             steps {
-                archiveArtifacts artifacts: 'result/*', fingerprint: true
+                archiveArtifacts artifacts: 'assignment2-5/result/*', fingerprint: true
             }
         }
     }

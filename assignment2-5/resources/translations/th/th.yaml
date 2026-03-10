@@ -4,3 +4,14 @@ heroku_trans:
   lbl_logout_success: "You logged out of the secure area!"
   lbl_login_password_failed: "Your password is invalid!"
   lbl_login_username_failed: "Your username is invalid!"
+
+mobile_trans:
+  home_page:
+    lbl_header: Minimal
+    lbl_icon_kebab: ตัวเลือกเพิ่มเติม
+    lbl_add_symbol: "@"
+    lbl_setting: Settings
+    lbl_about: About
+    lbl_about_title: Minimal
+    lbl_about_made_by: Made by Avjinder
+    lbl_about_contact_me: You can contact me at
