@@ -9,28 +9,25 @@ pipeline {
             }
         }
 
+        stage('Install Dependencies') {
+            steps {
+                sh '''
+                    pip install -r requirements.txt
+                '''
+            }
+        }
+
         stage('Run Test Automate') {
             steps {
-                bat '''
-                python -m venv .venv
-                .venv\\Scripts\\activate
-                pip install -r requirements.txt
-                robot -d results tests
+                sh '''
+                    python -m robot.run -L TRACE -d result -v LANG:th -v PLATFORM:api  -i feature:user_profile  testcases/
                 '''
             }
         }
 
         stage('Send Result To Jenkins') {
             steps {
-                archiveArtifacts artifacts: 'results/*', fingerprint: true
-                publishHTML([
-                    allowMissing: false,
-                    alwaysLinkToLastBuild: true,
-                    keepAll: true,
-                    reportDir: 'results',
-                    reportFiles: 'report.html',
-                    reportName: 'Robot Framework Report'
-                ])
+                archiveArtifacts artifacts: 'result/*', fingerprint: true
             }
         }
     }
